@@ -1,0 +1,17 @@
+//
+// Add include "/etc/bind/named.local.steam"; to your named.conf.local file
+//
+
+zone "dist.blizzard.com." IN {
+        type master;
+        file "/etc/bind/db.lancache.blizzard";
+};
+zone "llnw.blizzard.com." IN {
+        type master;
+        file "/etc/bind/db.lancache.blizzard";
+};
+zone "dist.blizzard.com.edgesuite.net." IN {
+        type master;
+        file "/etc/bind/db.lancache.blizzard";
+};
+

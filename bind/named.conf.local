@@ -1,0 +1,11 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+# include "/etc/bind/named.conf.local.blizzard-backend";
+# include "/etc/bind/named.conf.local.origin-backend";
+include "/etc/bind/named.conf.local.lan-cache";

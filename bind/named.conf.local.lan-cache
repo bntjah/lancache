@@ -1,0 +1,7 @@
+include "/etc/bind/named.conf.local.steam";
+include "/etc/bind/named.conf.local.riot";
+include "/etc/bind/named.conf.local.blizzard";
+include "/etc/bind/named.conf.local.hirez";
+include "/etc/bind/named.conf.local.origin";
+include "/etc/bind/named.conf.local.sony";
+

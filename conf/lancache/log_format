@@ -1,0 +1,3 @@
+log_format main '$remote_addr - $remote_user [$time_local] "$request" $status $body_bytes_sent "$http_referer" "$http_user_agent" "$upstream_cache_status" "$host" "$http_range"';
+log_format keys_default "$server_name$request_uri";
+

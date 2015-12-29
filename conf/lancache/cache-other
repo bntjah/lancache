@@ -1,0 +1,4 @@
+proxy_cache other;
+include lancache/proxy-cache;
+
+
