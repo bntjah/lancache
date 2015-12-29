@@ -85,3 +85,9 @@ OS: Ubuntu 14.04
 			sudo chown lancache:lancache /srv/lancache
 
 8)	Run nginx /opt/openresty/nginx/sbin/nginx
+
+Optional)	To monitor Traffic through Shell you can install nload
+
+	Optional A)	sudo apt-get install nload
+	
+	Optional B)	sudo nload -U G - u M -i 102400 -o 102400
