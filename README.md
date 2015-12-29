@@ -4,11 +4,17 @@ Based off work of https://gitlab.com/frag-o-matic/lan-cache
 By Bruno Gysels
 
 OS: Ubuntu 14.04
+
 Install following packages
+
 apt-get install libreadline-dev libncurses5-dev libpcre3-dev libssl-dev perl make
 
+
+
 sudo adduser --system --no-create-home lancache
+
 sudo addgroup --system lancache
+
 sudo usermod -aG lancache lancache
 
 1)      Install BIND
