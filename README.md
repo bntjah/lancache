@@ -3,6 +3,9 @@ LAN-Cache v1.0
 Based off work of https://gitlab.com/frag-o-matic/lan-cache
 By Bruno Gysels
 
+So Credits go to Bruno Gysels & The Original Creators from Lancache: MultiPlay.co.uk
+This is just as is so no support coming of sorts
+
 OS: Ubuntu 14.04
 
 1) 	Install following packages
