@@ -86,6 +86,7 @@ OS: Ubuntu 14.04
 
 8)	Run nginx /opt/openresty/nginx/sbin/nginx
 
+
 Optional)	To monitor Traffic through Shell you can install nload
 
 	Optional A)	sudo apt-get install nload
