@@ -36,27 +36,50 @@ OS: Ubuntu 14.04
 7)	Before starting make sure the following folders exist and are chowned by lancache
 	Since all the data will be stored under /srv/ I suggest you make this a seperate drive
 		/srv/lancache
+		
 		/srv/lancache/blizzard
+		
 		/srv/lancache/blizzard/logs
+		
 		/srv/lancache/blizzard/temp
+		
 		/srv/lancache/data/installs
+		
 		/srv/lancache/data/other
+		
 		/srv/lancache/data/tmp
+		
 		/srv/lancache/hirez/
+		
 		/srv/lancache/hirez/logs
+		
 		/srv/lancache/hirez/temp
+		
 		/srv/lancache/origin/
+		
 		/srv/lancache/origin/logs
+		
 		/srv/lancache/origin/temp
+		
 		/srv/lancache/riot/
+		
 		/srv/lancache/riot/logs
+		
 		/srv/lancache/riot/temp
+		
 		/srv/lancache/sony
+		
 		/srv/lancache/sony/logs
+		
 		/srv/lancache/sony/temp
+		
 		/srv/lancache/steam
+		
 		/srv/lancache/steam/logs
+		
 		/srv/lancache/steam/tmp
+		
+		
 	7.1)	chowning can be achieved by: 
 			sudo chmod -R 755 /srv/lancache
 			sudo chown lancache:lancache /srv/lancache
