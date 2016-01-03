@@ -1,7 +1,7 @@
 //
 // Add include "/etc/bind/named.local.steam"; to your named.conf.local file
 //
-
+# nexusofdoom only uses this blzddist1-a.akamaihd.net blzddist2-a.akamaihd.net
 zone "dist.blizzard.com." IN {
         type master;
         file "/etc/bind/db.lancache.blizzard";
