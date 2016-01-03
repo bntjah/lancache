@@ -1,9 +1,11 @@
-LAN-Cache v1.0
+LAN-Cache v1.1
 ==============
 Based off work of https://gitlab.com/frag-o-matic/lan-cache
 By Bruno Gysels
 
 So Credits go to Bruno Gysels and MultiPlay.co.uk
+
+Added Microsoft & Tera cache thanks to Nexusofdoom (now a collaborator)
 
 This is just as is so no support coming of sorts
 
