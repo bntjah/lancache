@@ -55,3 +55,14 @@ iface eth0:6 inet static
         address 192.168.1.96
         netmask 255.255.255.0
 
+auto eth0:7
+iface eth0:7 inet static
+        address 192.168.1.97
+        netmask 255.255.255.0
+		
+auto eth0:8
+iface eth0:8 inet static
+        address 192.168.1.98
+        netmask 255.255.255.0
+
+

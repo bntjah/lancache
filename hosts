@@ -8,10 +8,10 @@
 192.168.1.92 lancache-riot
 192.168.1.93 lancache-blizzard
 192.168.1.94 lancache-hirez
-192.168.1.94 lancache-tera
 192.168.1.95 lancache-origin
 192.168.1.96 lancache-sony
-192.168.1.96 lancache-microsoft
+192.168.1.97 lancache-microsoft
+192.168.1.98 lancache-tera
 
 # The following lines are desirable for IPv6 capable hosts
 ::1     ip6-localhost ip6-loopback
