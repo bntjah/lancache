@@ -7,3 +7,7 @@ zone "akamai.cdn.ea.com." IN {
         file "/etc/bind/db.lancache.origin";
 };
 
+zone "akamaihd.net." IN {
+        type master;
+        file "/etc/bind/db.lancache.origin";
+};
