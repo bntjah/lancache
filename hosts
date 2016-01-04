@@ -12,6 +12,7 @@
 192.168.1.96 lancache-sony
 192.168.1.97 lancache-microsoft
 192.168.1.98 lancache-tera
+192.168.1.99 lancache-gog
 
 # The following lines are desirable for IPv6 capable hosts
 ::1     ip6-localhost ip6-loopback
