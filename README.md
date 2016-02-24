@@ -94,7 +94,6 @@ OS: Ubuntu 14.04 x64
 		
 	- 10.1 chowning can be achieved by: 
 		sudo chmod -R 755 /srv/lancache
-		sudo chown lancache:lancache /srv/lancache
 
 	11) Copy the conf folder and contents (where you originally git cloned it to in step 4) to /usr/local/nginx/conf/
 	12) echo Start Nginx with the following
