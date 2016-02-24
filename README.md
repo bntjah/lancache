@@ -14,11 +14,11 @@ OS: Ubuntu 14.04 x64
 	- 2.1 Add the lines: prepend domain-name-servers 8.8.8.8, 8.8.4.4;
 	3) mkdir /srv/lancache
 	4) git clone -b development http://github.com/bntjah/lancache
-	5) wget https://github.com/bntjah/lancache/files/91993/nginx.txt
-	6) wget http://nginx.org/download/nginx-1.9.9.tar.gz
-	7) ./configure --with-http_slice_module
-	8) sudo make
-	9) sudo make install
+	5) wget http://nginx.org/download/nginx-1.9.9.tar.gz
+	6) ./configure --with-http_slice_module
+	7) sudo make
+	8) sudo make install
+	9) *grab a coffee right here*
 	10) sudo nano /etc/network/interfaces
 	- 10.1 Add the following:
 		auto eth1:1
