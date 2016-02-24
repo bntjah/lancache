@@ -12,15 +12,14 @@ OS: Ubuntu 14.04 x64
 	1) sudo apt-get install build-essential libpcre3 libpcre3-dev zlib1g-dev libreadline-dev libncurses5-dev libpcre3-dev git
 	2) sudo nano /etc/dhcp/dhclient.conf
 	- 2.1 Add the lines: prepend domain-name-servers 8.8.8.8, 8.8.4.4;
-	3) mkdir /srv/lancache
-	4) git clone -b development http://github.com/bntjah/lancache
-	5) wget http://nginx.org/download/nginx-1.9.9.tar.gz
-	6) ./configure --with-http_slice_module
-	7) sudo make
-	8) sudo make install
-	9) *grab a coffee right here*
-	10) sudo nano /etc/network/interfaces
-	- 10.1 Add the following:
+	3) git clone -b development http://github.com/bntjah/lancache
+	4) wget http://nginx.org/download/nginx-1.9.9.tar.gz
+	5) ./configure --with-http_slice_module
+	6) sudo make
+	7) sudo make install
+	8) *grab a coffee right here*
+	9) sudo nano /etc/network/interfaces
+	- 9.1 Add the following:
 		auto eth1:1
 		iface eth1:1 inet static
         	address 192.168.1.91
@@ -77,31 +76,30 @@ OS: Ubuntu 14.04 x64
         	netmask 255.255.255.0
 
 	Note to self: Should make a script for the Step 11)
-	11) Just create the folders: /srv/lancache/ 
+	10) Just create the folders: /srv/lancache/ 
 	
-		sudo mkdir /srv/lancache
-		sudo mkdir /srv/lancache/blizzard
-		sudo mkdir /srv/lancache/data/installs
-		sudo mkdir /srv/lancache/data/other
-		sudo mkdir /srv/lancache/data/tmp
-		sudo mkdir /srv/lancache/hirez/
-		sudo mkdir /srv/lancache/origin/
-		sudo mkdir /srv/lancache/riot/
-		sudo mkdir /srv/lancache/sony/
-		sudo mkdir /srv/lancache/steam/
-		sudo mkdir /srv/lancache/logs
-		sudo mkdir /srv/lancache/wargaming
-		sudo mkdir /srv/lancache/tera
-		sudo mkdir /srv/lancache/arenanetworks
+		sudo mkdir -p /srv/lancache/blizzard
+		sudo mkdir -p /srv/lancache/data/installs
+		sudo mkdir -p /srv/lancache/data/other
+		sudo mkdir -p /srv/lancache/data/tmp
+		sudo mkdir -p /srv/lancache/hirez/
+		sudo mkdir -p /srv/lancache/origin/
+		sudo mkdir -p /srv/lancache/riot/
+		sudo mkdir -p /srv/lancache/sony/
+		sudo mkdir -p /srv/lancache/steam/
+		sudo mkdir -p /srv/lancache/logs
+		sudo mkdir -p /srv/lancache/wargaming
+		sudo mkdir -p /srv/lancache/tera
+		sudo mkdir -p /srv/lancache/arenanetworks
 		
-	- 11.1 chowning can be achieved by: 
+	- 10.1 chowning can be achieved by: 
 		sudo chmod -R 755 /srv/lancache
 		sudo chown lancache:lancache /srv/lancache
 
-	12) Copy the conf folder and contents (where you originally git cloned it to in step 4) to /usr/local/nginx/conf/
-	13) echo Start Nginx with the following
-	- 13.1 cd /usr/local/nginx/sbin/
-	- 13.2 sudo ./nginx
+	11) Copy the conf folder and contents (where you originally git cloned it to in step 4) to /usr/local/nginx/conf/
+	12) echo Start Nginx with the following
+	- 12.1 cd /usr/local/nginx/sbin/
+	- 12.2 sudo ./nginx
 
 	Optional A) Monitor Through nload
 		-A.1 sudo apt-get install nload -y
