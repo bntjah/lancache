@@ -1,5 +1,5 @@
 //
-// Add include "/etc/bind/named.local.steam"; to your named.conf.local file
+// Add include "/etc/bind/named.local.origin"; to your named.conf.local file
 //
 
 zone "akamai.cdn.ea.com." IN {
@@ -7,7 +7,13 @@ zone "akamai.cdn.ea.com." IN {
         file "/etc/bind/db.lancache.origin";
 };
 
-zone "akamaihd.net." IN {
+zone "origin-a.akamaihd.net." IN {
         type master;
         file "/etc/bind/db.lancache.origin";
 };
+
+zone "origin-b.akamaihd.net." IN {
+        type master;
+        file "/etc/bind/db.lancache.origin";
+};
+
