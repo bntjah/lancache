@@ -77,52 +77,59 @@ OS: Ubuntu 14.04 x64
         	netmask 255.255.255.0
 
 
-	11) Before starting make sure the following folders exist and are chowned by lancache
-		Since all the data will be stored under /srv/ I suggest you make this a seperate drive
-		/srv/lancache
+	11) Just create the folders: /srv/lancache/ 
+	Note to self: Should make a script for the following
+		sudo mkdir /srv/lancache
 		
-		/srv/lancache/blizzard
+		sudo mkdir /srv/lancache/blizzard
 		
-		/srv/lancache/blizzard/logs
+		sudo mkdir /srv/lancache/blizzard/
 		
-		/srv/lancache/blizzard/temp
+		sudo mkdir /srv/lancache/blizzard/
 		
-		/srv/lancache/data/installs
+		sudo mkdir /srv/lancache/data/installs
 		
-		/srv/lancache/data/other
+		sudo mkdir /srv/lancache/data/other
 		
-		/srv/lancache/data/tmp
+		sudo mkdir /srv/lancache/data/tmp
 		
-		/srv/lancache/hirez/
+		sudo mkdir /srv/lancache/hirez/
+	
+		sudo mkdir /srv/lancache/hirez/
 		
-		/srv/lancache/hirez/logs
+		sudo mkdir /srv/lancache/hirez/
 		
-		/srv/lancache/hirez/temp
+		sudo mkdir /srv/lancache/origin/
 		
-		/srv/lancache/origin/
+		sudo mkdir /srv/lancache/origin/
 		
-		/srv/lancache/origin/logs
+		sudo mkdir /srv/lancache/origin/
 		
-		/srv/lancache/origin/temp
+		sudo mkdir /srv/lancache/riot/
 		
-		/srv/lancache/riot/
+		sudo mkdir /srv/lancache/riot/
 		
-		/srv/lancache/riot/logs
+		sudo mkdir /srv/lancache/riot/
 		
-		/srv/lancache/riot/temp
+		sudo mkdir /srv/lancache/sony
 		
-		/srv/lancache/sony
+		sudo mkdir /srv/lancache/sony/
 		
-		/srv/lancache/sony/logs
+		sudo mkdir /srv/lancache/sony/
 		
-		/srv/lancache/sony/temp
+		sudo mkdir /srv/lancache/steam
 		
-		/srv/lancache/steam
+		sudo mkdir /srv/lancache/steam/
 		
-		/srv/lancache/steam/logs
+		sudo mkdir /srv/lancache/steam/
 		
-		/srv/lancache/steam/tmp
+		sudo mkdir /srv/lancache/logs
 		
+		sudo mkdir /srv/lancache/wargaming
+		
+		sudo mkdir /srv/lancache/tera
+		
+		sudo mkdir /srv/lancache/arenanetworks
 		
 	- 11.1 chowning can be achieved by: 
 		sudo chmod -R 755 /srv/lancache
