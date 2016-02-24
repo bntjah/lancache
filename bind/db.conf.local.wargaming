@@ -1,0 +1,45 @@
+//
+// Add include "/etc/bind/named.local.steam"; to your named.conf.local file
+//
+
+zone "wg.gcdn.co." IN {
+        type master;
+        file "/etc/bind/db.lancache.wargaming";
+};
+
+zone "wargaming.net.edgesuite.net." IN {
+        type master;
+        file "/etc/bind/db.lancache.wargaming";
+};
+
+zone "wgusst-na.wargaming.net." IN {
+        type master;
+        file "/etc/bind/db.lancache.wargaming";
+};
+
+zone "wgusst-eu.wargaming.net." IN {
+        type master;
+        file "/etc/bind/db.lancache.wargaming";
+};
+
+zone "tracker-na.wargaming.net." IN {
+        type master;
+        file "/etc/bind/db.lancache.wargaming";
+};
+
+
+zone "tracker-eu.wargaming.net." IN {
+        type master;
+        file "/etc/bind/db.lancache.wargaming";
+};
+
+
+zone "update-v4r4h10x.worldofwarships.com." IN {
+        type master;
+        file "/etc/bind/db.lancache.wargaming";
+};
+
+zone "dl2.wargaming.net." IN {
+        type master;
+        file "/etc/bind/db.lancache.wargaming";
+};
