@@ -76,9 +76,9 @@ OS: Ubuntu 14.04 x64
         	address 192.168.1.70
         	netmask 255.255.255.0
 
-
+	Note to self: Should make a script for the Step 11)
 	11) Just create the folders: /srv/lancache/ 
-	Note to self: Should make a script for the following
+	
 		sudo mkdir /srv/lancache
 		
 		sudo mkdir /srv/lancache/blizzard
