@@ -7,6 +7,8 @@ So Credits go to Bruno Gysels and MultiPlay.co.uk for the base they made!
 Credits for this work of art in Development Branch as of 24 Febr. 2016 is to NexusofDoom !!!
 
 OS: Ubuntu 14.04 x64
+
+
 	1) sudo apt-get install build-essentials libpcre3 libpcre3-dev zlib1g-dev libreadline-dev libncurses5-dev libpcre3-dev
 	2) sudo nano /etc/dhcp/dhclient.conf
 	- 2.1 Add the lines: prepend domain-name-servers 8.8.8.8, 8.8.4.4;
