@@ -13,7 +13,7 @@ OS: Ubuntu 14.04 x64
 	2) sudo nano /etc/dhcp/dhclient.conf
 	- 2.1 Add the lines: prepend domain-name-servers 8.8.8.8, 8.8.4.4;
 	3) git clone -b development http://github.com/bntjah/lancache
-	4) wget http://nginx.org/download/nginx-1.9.9.tar.gz
+	4) curl http://nginx.org/download/nginx-1.9.9.tar.gz | tar zx
 	5) ./configure --with-http_slice_module
 	6) sudo make
 	7) sudo make install
