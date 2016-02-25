@@ -76,6 +76,8 @@ OS: Ubuntu 14.04 x64
         	netmask 255.255.255.0
 
 	Note to self: Should make a script for the Step 10)
+	hosts file, bind config and necessary individual edits to db.* files should be mentioned.
+	
 	10) Just create the folders: /srv/lancache/ 
 	
 		sudo mkdir -p /srv/lancache/blizzard
