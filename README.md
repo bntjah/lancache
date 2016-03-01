@@ -80,19 +80,20 @@ OS: Ubuntu 14.04 x64
 	
 	10) Just create the folders: /srv/lancache/ 
 	
-		sudo mkdir -p /srv/lancache/blizzard
+		sudo mkdir -p /srv/lancache/data/blizzard
+		sudo mkdir -p /srv/lancache/data/microsoft
 		sudo mkdir -p /srv/lancache/data/installs
 		sudo mkdir -p /srv/lancache/data/other
 		sudo mkdir -p /srv/lancache/data/tmp
-		sudo mkdir -p /srv/lancache/hirez/
-		sudo mkdir -p /srv/lancache/origin/
-		sudo mkdir -p /srv/lancache/riot/
-		sudo mkdir -p /srv/lancache/sony/
-		sudo mkdir -p /srv/lancache/steam/
+		sudo mkdir -p /srv/lancache/data/hirez/
+		sudo mkdir -p /srv/lancache/data/origin/
+		sudo mkdir -p /srv/lancache/data/riot/
+		sudo mkdir -p /srv/lancache/data/sony/
+		sudo mkdir -p /srv/lancache/data/steam/
 		sudo mkdir -p /srv/lancache/logs
-		sudo mkdir -p /srv/lancache/wargaming
-		sudo mkdir -p /srv/lancache/tera
-		sudo mkdir -p /srv/lancache/arenanetworks
+		sudo mkdir -p /srv/lancache/data/wargaming
+		sudo mkdir -p /srv/lancache/data/tera
+		sudo mkdir -p /srv/lancache/data/arenanetworks
 		
 	- 10.1 chowning can be achieved by: 
 		sudo chmod -R 755 /srv/lancache
