@@ -77,8 +77,12 @@ OS: Ubuntu 14.04 x64
 
 	Note to self: Should make a script for the Step 10)
 	hosts file, bind config and necessary individual edits to db.* files should be mentioned.
+	10) Create the user lancache
+		sudo adduser --system --no-create-home lancache
+		sudo addgroup --system lancache
+		sudo usermod -aG lancache lancache
 	
-	10) Just create the folders: /srv/lancache/ 
+	11) Just create the folders: /srv/lancache/ 
 	
 		sudo mkdir -p /srv/lancache/data/blizzard
 		sudo mkdir -p /srv/lancache/data/microsoft
@@ -95,13 +99,13 @@ OS: Ubuntu 14.04 x64
 		sudo mkdir -p /srv/lancache/data/tera
 		sudo mkdir -p /srv/lancache/data/arenanetworks
 		
-	- 10.1 chowning can be achieved by: 
+	- 11.1 chowning can be achieved by: 
 		sudo chmod -R 755 /srv/lancache
 
-	11) Copy the conf folder and contents (where you originally git cloned it to in step 4) to /usr/local/nginx/conf/
-	12) echo Start Nginx with the following
-	- 12.1 cd /usr/local/nginx/sbin/
-	- 12.2 sudo ./nginx
+	12) Copy the conf folder and contents (where you originally git cloned it to in step 4) to /usr/local/nginx/conf/
+	13) echo Start Nginx with the following
+	- 13.1 cd /usr/local/nginx/sbin/
+	- 13.2 sudo ./nginx
 
 	Optional A) Monitor Through nload
 		-A.1 sudo apt-get install nload -y
