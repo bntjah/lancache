@@ -1,4 +1,4 @@
-LAN-Cache v1.1.2
+LAN-Cache v1.1.3
 ==============
 
 Based off work of https://gitlab.com/frag-o-matic/lan-cache
@@ -82,8 +82,7 @@ OS: Ubuntu 14.04 x64
 		sudo addgroup --system lancache
 		sudo usermod -aG lancache lancache
 	
-	11) Just create the folders: /srv/lancache/ 
-	
+	11) Just create the folders:
 		sudo mkdir -p /srv/lancache/data/blizzard
 		sudo mkdir -p /srv/lancache/data/microsoft
 		sudo mkdir -p /srv/lancache/data/installs
@@ -103,9 +102,15 @@ OS: Ubuntu 14.04 x64
 		sudo chmod -R 755 /srv/lancache
 
 	12) Copy the conf folder and contents (where you originally git cloned it to in step 4) to /usr/local/nginx/conf/
-	13) echo Start Nginx with the following
-	- 13.1 cd /usr/local/nginx/sbin/
-	- 13.2 sudo ./nginx
+	13) Copy the Lancache file from init.d/ to /etc/init.d/ by:
+		sudo cp lancache /etc/init.d/lancache
+	14) Make it an executable:
+		sudo chmod +x /etc/init.d/lancache
+	15) Put it in the standard Boot:
+		sudo update-rc.d lancache defaults
+	16) Start Lancache / Nginx by:
+		sudo /etc/init.d/lancache start
+	
 
 	Optional A) Monitor Through nload
 		-A.1 sudo apt-get install nload -y
