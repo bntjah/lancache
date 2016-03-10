@@ -9,4 +9,4 @@
 # include "/etc/bind/named.conf.local.blizzard-backend";
 # include "/etc/bind/named.conf.local.origin-backend";
 include "/etc/bind/named.conf.local.lan-cache";
-include "/etc/bind/named.conf.local.culan";
+# include "/etc/bind/named.conf.local.culan";
