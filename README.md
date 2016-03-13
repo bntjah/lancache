@@ -8,6 +8,7 @@ Credits for this work of art in Development Branch as of 24 Febr. 2016 is to Nex
 
 OS: Ubuntu 14.04 x64
 
+If you are to lazy to read below you can use the script I created for this: https://github.com/bntjah/lc-installer
 
 	1) sudo apt-get install build-essential libpcre3 libpcre3-dev zlib1g-dev libreadline-dev libncurses5-dev git
 	2) sudo nano /etc/dhcp/dhclient.conf
