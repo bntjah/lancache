@@ -14,7 +14,7 @@
 PATH=/opt/bin:/opt/sbin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 DAEMON=/usr/local/nginx/sbin/nginx
 NAME=lancache
-DESC=Caching Games Locally
+# DESC=Caching Games Locally
  
 test -x $DAEMON || exit 0
  
