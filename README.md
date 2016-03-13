@@ -12,7 +12,7 @@ OS: Ubuntu 14.04 x64
 	1) sudo apt-get install build-essential libpcre3 libpcre3-dev zlib1g-dev libreadline-dev libncurses5-dev libpcre3-dev git
 	2) sudo nano /etc/dhcp/dhclient.conf
 	- 2.1 Add the lines: prepend domain-name-servers 8.8.8.8, 8.8.4.4;
-	3) git clone -b development http://github.com/bntjah/lancache
+	3) git clone -b master http://github.com/bntjah/lancache
 	4) curl http://nginx.org/download/nginx-1.9.9.tar.gz | tar zx
 	5) ./configure --with-http_ssl_module --with-http_slice_module
 	6) sudo make
