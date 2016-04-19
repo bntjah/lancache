@@ -121,4 +121,5 @@ If you are to lazy to read below you can use the script I created for this: [htt
 		-B.2 sudo iftop -i eth1
 		Note ETH1 is the Interface I've defined for Lancache to use
 		
-
+Note for LOL:
+"The latest released client has included an HTTP downgrade for RFC1918 (or local IP) addresses. But as this instance of lancache has never recommended route poisoning over DNS spoofing, I think we're ok without." -@Stealthii
