@@ -43,3 +43,9 @@ zone "dl2.wargaming.net." IN {
         type master;
         file "/etc/bind/db.lancache.wargaming";
 };
+
+zone "dl-wows-ak.wargaming.net." IN {
+        type master;
+        file "/etc/bind/db.lancache.wargaming";
+};
+
