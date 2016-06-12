@@ -46,6 +46,10 @@ zone "hsar.steampowered.com.edgesuite.net." IN {
         type master;
         file "/etc/bind/db.lancache.steam";
 };
+zone "steampipe.steamcontent.com." IN {
+        type master;
+        file "/etc/bind/db.lancache.steam";
+};
 
 
 
