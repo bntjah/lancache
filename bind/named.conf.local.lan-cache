@@ -6,4 +6,5 @@ include "/etc/bind/named.conf.local.origin";
 include "/etc/bind/named.conf.local.sony";
 include "/etc/bind/named.conf.local.tera";
 include "/etc/bind/named.conf.local.microsoft";
-include "/etc/bind/named.conf.local.gog";
+#include "/etc/bind/named.conf.local.gog"; #Commented because HTTPS ATM
+include "/etc/bind/named.conf.local.wargaming";
