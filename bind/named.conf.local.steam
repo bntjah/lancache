@@ -50,7 +50,7 @@ zone "steampipe.steamcontent.com." IN {
         type master;
         file "/etc/bind/db.lancache.steam";
 };
-zone ".steamcontent.com." IN {
+zone "steamcontent.com." IN {
         type master;
         file "/etc/bind/db.lancache.steam";
 };
