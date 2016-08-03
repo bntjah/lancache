@@ -19,62 +19,33 @@ If you are to lazy to read below you can use the script I created for this: [htt
 	6) sudo make
 	7) sudo make install
 	8) *grab a coffee right here*
-	9) sudo nano /etc/network/interfaces
-	- 9.1 Add the following:
-		auto eth1:1
-		iface eth1:1 inet static
-        	address 192.168.1.91
-        	netmask 255.255.255.0
-
-		auto eth1:2
-		iface eth1:2 inet static
-        	address 192.168.1.92
-        	netmask 255.255.255.0
-
-		auto eth1:3
-		iface eth1:3 inet static
-        	address 192.168.1.93
-        	netmask 255.255.255.0
-
-		auto eth1:4
-		iface eth1:4 inet static
-        	address 192.168.1.94
-        	netmask 255.255.255.0
-	
-		auto eth1:5
-		iface eth1:5 inet static
-        	address 192.168.1.95
-        	netmask 255.255.255.0
-
-		auto eth1:6
-		iface eth1:6 inet static
-        	address 192.168.1.96
-        	netmask 255.255.255.0
-
-		auto eth1:7
-		iface eth1:7 inet static
-        	address 192.168.1.97
-        	netmask 255.255.255.0
-
-		auto eth1:8
-		iface eth1:8 inet static
-        	address 192.168.1.98
-        	netmask 255.255.255.0
-
-		auto eth1:9
-		iface eth1:9 inet static
-        	address 192.168.1.99
-        	netmask 255.255.255.0
-
-		auto eth1:10
-		iface eth1:10 inet static
-        	address 192.168.1.90
-        	netmask 255.255.255.0
-
-		auto eth1:11
-		iface eth1:11 inet static
-        	address 192.168.1.70
-        	netmask 255.255.255.0
+	9) Creating the necessary ip's
+		9.1) Paste the following in ~/addips.sh
+		# Ip used for STEAM caching
+		sudo /sbin/ip addr add 10.0.1.11/16 dev eth0
+		# Ip used for RIOT caching
+		sudo /sbin/ip addr add  10.0.1.12/16 dev eth0
+		# Ip used for Blizzard caching
+		sudo /sbin/ip addr add  10.0.1.13/16 dev eth0
+		# Ip used for Hirez caching
+		sudo /sbin/ip addr add  10.0.1.14/16 dev eth0
+		# Ip used for Origin caching
+		sudo /sbin/ip addr add  10.0.1.15/16 dev eth0
+		# Ip used for Sony caching
+		sudo /sbin/ip addr add  10.0.1.16/16 dev eth0
+		# Ip used for Microsoft caching
+		sudo /sbin/ip addr add  10.0.1.17/16 dev eth0
+		# Ip used for Tera caching
+		sudo /sbin/ip addr add  10.0.1.18/16 dev eth0
+		# Ip used for GOG caching
+		sudo /sbin/ip addr add  10.0.1.19/16 dev eth0
+		# Ip used for ArenaNetworks caching
+		sudo /sbin/ip addr add  10.0.1.20/16 dev eth0
+		# Ip used for WarGaming caching
+		sudo /sbin/ip addr add  10.0.1.21/16 dev eth0
+		9.2) sh ~/addips.sh
+		9.3) Check if all ips are there with
+		ip addr show
 
 	Note to self: Should make a script for the Step 10)
 	hosts file, bind config and necessary individual edits to db.* files should be mentioned.
