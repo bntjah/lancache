@@ -10,7 +10,7 @@ OS: Ubuntu 14.04 x64
 
 If you are to lazy to read below you can use the script I created for this: [https://github.com/bntjah/lc-installer](My LC-Installer) (warning might contain bugs!)
 
-	1) sudo apt-get install build-essential libpcre3 libpcre3-dev zlib1g-dev libreadline-dev libncurses5-dev git
+	1) sudo apt-get install build-essential libpcre3 libpcre3-dev zlib1g-dev libreadline-dev libncurses5-dev git libssl-dev
 	2) sudo nano /etc/dhcp/dhclient.conf
 	- 2.1 Add the lines: prepend domain-name-servers 8.8.8.8, 8.8.4.4;
 	3) git clone -b master http://github.com/bntjah/lancache
