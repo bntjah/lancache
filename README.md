@@ -6,46 +6,86 @@ So Credits go to Bruno Gysels and MultiPlay.co.uk for the base they made!
 
 Credits for this work of art as of 24 Febr. 2016 is to NexusofDoom !!!
 
-OS: Ubuntu 14.04 x64
+OS: Ubuntu 16.04.1 x64
 
-If you are to lazy to read below you can use the script I created for this: [https://github.com/bntjah/lc-installer](My LC-Installer) (warning might contain bugs!)
+If you are to lazy to read below you can use the script I created for this: [https://github.com/bntjah/lc-installer](My LC-Installer) (warning might contain bugs! So proceed on your own accord!)
 
 	1) sudo apt-get install build-essential libpcre3 libpcre3-dev zlib1g-dev libreadline-dev libncurses5-dev git libssl-dev
 	2) sudo nano /etc/dhcp/dhclient.conf
 	- 2.1 Add the lines: prepend domain-name-servers 8.8.8.8, 8.8.4.4;
 	3) git clone -b master http://github.com/bntjah/lancache
-	4) curl http://nginx.org/download/nginx-1.9.9.tar.gz | tar zx
+	4) curl http://nginx.org/download/nginx-1.11.3.tar.gz | tar zx
 	5) ./configure --with-http_ssl_module --with-http_slice_module
-	6) sudo make
+	6) make
 	7) sudo make install
 	8) *grab a coffee right here*
 	9) Creating the necessary ip's
-		9.1) Paste the following in ~/addips.sh
+		9.1) Paste the following in /etc/network/interfaces as root
 		# Ip used for STEAM caching
-		sudo /sbin/ip addr add 10.0.1.11/16 dev eth0
+		auto ens160:1
+		iface ens160:1 inet static
+		address 10.0.1.11
+		netmask 255.255.0.0
+		
 		# Ip used for RIOT caching
-		sudo /sbin/ip addr add  10.0.1.12/16 dev eth0
+		auto ens160:2
+		iface ens160:2 inet static
+		address 10.0.1.12
+		netmask 255.255.0.0
+		
 		# Ip used for Blizzard caching
-		sudo /sbin/ip addr add  10.0.1.13/16 dev eth0
+		auto ens160:3
+		iface ens160:3 inet static
+		address 10.0.1.13
+		netmask 255.255.0.0
+		
 		# Ip used for Hirez caching
-		sudo /sbin/ip addr add  10.0.1.14/16 dev eth0
-		# Ip used for Origin caching
-		sudo /sbin/ip addr add  10.0.1.15/16 dev eth0
+		auto ens160:4
+		iface ens160:4 inet static
+		address 10.0.1.14
+		netmask 255.255.0.0
+
+		# Ip used for Origin caching	
+		auto ens160:5
+		iface ens160:5 inet static
+		address 10.0.1.15
+		netmask 255.255.0.0
+		
 		# Ip used for Sony caching
-		sudo /sbin/ip addr add  10.0.1.16/16 dev eth0
+		auto ens160:6
+		iface ens160:6 inet static
+		address 10.0.1.16
+		netmask 255.255.0.0
+		
 		# Ip used for Microsoft caching
-		sudo /sbin/ip addr add  10.0.1.17/16 dev eth0
+		auto ens160:7
+		iface ens160:7 inet static
+		address 10.0.1.17
+		netmask 255.255.0.0
+		
 		# Ip used for Tera caching
-		sudo /sbin/ip addr add  10.0.1.18/16 dev eth0
+		auto ens160:8
+		iface ens160:8 inet static
+		address 10.0.1.18
+		netmask 255.255.0.0
+
 		# Ip used for GOG caching
-		sudo /sbin/ip addr add  10.0.1.19/16 dev eth0
+		auto ens160:9
+		iface ens160:9 inet static
+		address 10.0.1.19
+		netmask 255.255.0.0
+
 		# Ip used for ArenaNetworks caching
-		sudo /sbin/ip addr add  10.0.1.20/16 dev eth0
+		auto ens160:10
+		iface ens160:10 inet static
+		address 10.0.1.20
+		netmask 255.255.0.0
+
 		# Ip used for WarGaming caching
-		sudo /sbin/ip addr add  10.0.1.21/16 dev eth0
-		9.2) sh ~/addips.sh
-		9.3) Check if all ips are there with
-		ip addr show
+		auto ens160:11
+		iface ens160:11 inet static
+		address 192.168.1.21
+		netmask 255.255.0.0
 
 	Note to self: Should make a script for the Step 10)
 	hosts file, bind config and necessary individual edits to db.* files should be mentioned.
@@ -71,16 +111,18 @@ If you are to lazy to read below you can use the script I created for this: [htt
 		sudo mkdir -p /srv/lancache/data/arenanetworks
 		
 	- 11.1 chowning can be achieved by: 
-		sudo chmod -R 755 /srv/lancache
+		sudo chown -R lancache:lancache /srv/lancache
 
 	12) Copy the conf folder and contents (where you originally git cloned it to in step 4) to /usr/local/nginx/conf/
+		sudo cp -R ~/lancache/conf /usr/local/nginx/
 	13) Copy the Lancache file from init.d/ to /etc/init.d/ by:
 		sudo cp lancache /etc/init.d/lancache
 	14) Make it an executable:
 		sudo chmod +x /etc/init.d/lancache
 	15) Put it in the standard Boot:
 		sudo update-rc.d lancache defaults
-	16) Start Lancache / Nginx by:
+	16) Copy limits.conf to /etc/security/limits.conf 
+	17) Start Lancache / Nginx by:
 		sudo /etc/init.d/lancache start
 	
 
