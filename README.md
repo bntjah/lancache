@@ -84,7 +84,7 @@ If you are to lazy to read below you can use the script I created for this: [htt
 		# Ip used for WarGaming caching
 		auto ens160:11
 		iface ens160:11 inet static
-		address 192.168.1.21
+		address 10.0.1.21
 		netmask 255.255.0.0
 
 	Note to self: Should make a script for the Step 10)
