@@ -116,7 +116,7 @@ If you are to lazy to read below you can use the script I created for this: http
 	12) Copy the conf folder and contents (where you originally git cloned it to in step 4) to /usr/local/nginx/conf/
 		sudo cp -R ~/lancache/conf /usr/local/nginx/
 	13) Copy the Lancache file from init.d/ to /etc/init.d/ by:
-		sudo cp lancache /etc/init.d/lancache
+		sudo cp -R lancache /etc/init.d/lancache
 	14) Make it an executable:
 		sudo chmod +x /etc/init.d/lancache
 	15) Put it in the standard Boot:
