@@ -8,7 +8,7 @@ Credits for this work of art as of 24 Febr. 2016 is to NexusofDoom !!!
 
 OS: Ubuntu 16.04.1 x64
 
-If you are to lazy to read below you can use the script I created for this: [https://github.com/bntjah/lc-installer](My LC-Installer) (warning might contain bugs! So proceed on your own accord!)
+If you are to lazy to read below you can use the script I created for this: https://github.com/bntjah/lc-installer (warning might contain bugs! So proceed on your own accord!)
 
 	1) sudo apt-get install build-essential libpcre3 libpcre3-dev zlib1g-dev libreadline-dev libncurses5-dev git libssl-dev
 	2) sudo nano /etc/dhcp/dhclient.conf
