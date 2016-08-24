@@ -6,7 +6,7 @@ So Credits go to Bruno Gysels and MultiPlay.co.uk for the base they made!
 
 Credits for this work of art as of 24 Febr. 2016 is to NexusofDoom !!!
 
-OS: Ubuntu 16.04.1 x64
+OS: Debian 8.5 x64 (Jessie)
 
 If you are to lazy to read below you can use the script I created for this: https://github.com/bntjah/lc-installer (warning might contain bugs! So proceed on your own accord!)
 
@@ -22,68 +22,68 @@ If you are to lazy to read below you can use the script I created for this: http
 	9) Creating the necessary ip's
 		9.1) Paste the following in /etc/network/interfaces as root
 		# Ip used for STEAM caching
-		auto ens160:1
-		iface ens160:1 inet static
+		auto eth0:1
+		iface eth0:1 inet static
 		address 10.0.1.11
 		netmask 255.255.0.0
 		
 		# Ip used for RIOT caching
-		auto ens160:2
-		iface ens160:2 inet static
+		auto eth0:2
+		iface eth0:2 inet static
 		address 10.0.1.12
 		netmask 255.255.0.0
 		
 		# Ip used for Blizzard caching
-		auto ens160:3
-		iface ens160:3 inet static
+		auto eth0:3
+		iface eth0:3 inet static
 		address 10.0.1.13
 		netmask 255.255.0.0
 		
 		# Ip used for Hirez caching
-		auto ens160:4
-		iface ens160:4 inet static
+		auto eth0:4
+		iface eth0:4 inet static
 		address 10.0.1.14
 		netmask 255.255.0.0
 
 		# Ip used for Origin caching	
-		auto ens160:5
-		iface ens160:5 inet static
+		auto eth0:5
+		iface eth0:5 inet static
 		address 10.0.1.15
 		netmask 255.255.0.0
 		
 		# Ip used for Sony caching
-		auto ens160:6
-		iface ens160:6 inet static
+		auto eth0:6
+		iface eth0:6 inet static
 		address 10.0.1.16
 		netmask 255.255.0.0
 		
 		# Ip used for Microsoft caching
-		auto ens160:7
-		iface ens160:7 inet static
+		auto eth0:7
+		iface eth0:7 inet static
 		address 10.0.1.17
 		netmask 255.255.0.0
 		
 		# Ip used for Tera caching
-		auto ens160:8
-		iface ens160:8 inet static
+		auto eth0:8
+		iface eth0:8 inet static
 		address 10.0.1.18
 		netmask 255.255.0.0
 
 		# Ip used for GOG caching
-		auto ens160:9
-		iface ens160:9 inet static
+		auto eth0:9
+		iface eth0:9 inet static
 		address 10.0.1.19
 		netmask 255.255.0.0
 
 		# Ip used for ArenaNetworks caching
-		auto ens160:10
-		iface ens160:10 inet static
+		auto eth0:10
+		iface eth0:10 inet static
 		address 10.0.1.20
 		netmask 255.255.0.0
 
 		# Ip used for WarGaming caching
-		auto ens160:11
-		iface ens160:11 inet static
+		auto eth0:11
+		iface eth0:11 inet static
 		address 10.0.1.21
 		netmask 255.255.0.0
 
@@ -124,7 +124,13 @@ If you are to lazy to read below you can use the script I created for this: http
 	16) Copy limits.conf to /etc/security/limits.conf 
 	17) Start Lancache / Nginx by:
 		sudo /etc/init.d/lancache start
-	
+	18) This step is extra but adviced for passing through HTTPS traffic
+		18.1) git clone https://github.com/dlundquist/sniproxy
+		18.2) nano /etc/sniproxy.conf
+		Copy the data from https://github.com/OpenSourceLAN/origin-docker/blob/master/sniproxy/sniproxy.conf to the file
+		18.3) cd sniproxy/src
+		18.4) Start sniproxy with ./sniproxy -c /etc/sniproxy.conf
+		
 
 	Optional A) Monitor Through nload
 		-A.1 sudo apt-get install nload -y
@@ -134,5 +140,4 @@ If you are to lazy to read below you can use the script I created for this: http
 		-B.2 sudo iftop -i eth1
 		Note ETH1 is the Interface I've defined for Lancache to use
 		
-Note for LOL:
-"The latest released client has included an HTTP downgrade for RFC1918 (or local IP) addresses. But as this instance of lancache has never recommended route poisoning over DNS spoofing, I think we're ok without." -Stealthii
+Please note that this is how my setup runs on Debian x64 with ZFS configured.
