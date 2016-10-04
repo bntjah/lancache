@@ -12,9 +12,9 @@ zone "origin-a.akamaihd.net." IN {
         file "/etc/bind/db.lancache.origin";
 };
 
-zone "lvlt.cdn.ea.com."
+zone "lvlt.cdn.ea.com." IN {
         type master;
-        file"file "/etc/bind/db.lancache.origin";
+        file "/etc/bind/db.lancache.origin";
 };
 
 zone "origin-b.akamaihd.net." IN {
