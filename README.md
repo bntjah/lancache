@@ -7,7 +7,11 @@ So Credits go to Bruno Gysels and MultiPlay.co.uk for the base they made!
 ## Short Changelog
 *2-24-2016 bn_: Added improvements / Ideas from Nexusofdoom
 
-*1-4-2017 bn_: Added unbound config | dividing the installation of DNS resolver into the corresponding folders. Also added a few new dns names for Riot
+*1-4-2017 bn_: 
+		- Added unbound config
+		- Dividing the installation of DNS resolver into the corresponding folders. 
+		- Added a few new dns names for Riot
+		- Noticed that the hosts was written down what to do; added that lign
 
 OS: Debian 8.5 x64 (Jessie)
 
