@@ -1,4 +1,4 @@
-LAN-Cache v1.1.3
+LAN-Cache v1.1.4
 ==============
 
 Based off work of https://gitlab.com/frag-o-matic/lan-cache
@@ -123,14 +123,15 @@ If you are to lazy to read below you can use the script I created for this: http
 	15) Put it in the standard Boot:
 		sudo update-rc.d lancache defaults
 	16) Copy limits.conf to /etc/security/limits.conf 
-	17) Start Lancache / Nginx by:
+	17) Copy hosts to /etc/hosts
+	18) Start Lancache / Nginx by:
 		sudo /etc/init.d/lancache start
-	18) This step is extra but adviced for passing through HTTPS traffic
-		18.1) git clone https://github.com/dlundquist/sniproxy
-		18.2) nano /etc/sniproxy.conf
+	19) This step is extra but adviced for passing through HTTPS traffic
+		19.1) git clone https://github.com/dlundquist/sniproxy
+		19.2) nano /etc/sniproxy.conf
 		Copy the data from https://github.com/OpenSourceLAN/origin-docker/blob/master/sniproxy/sniproxy.conf to the file
-		18.3) cd sniproxy/src
-		18.4) Start sniproxy with ./sniproxy -c /etc/sniproxy.conf
+		19.3) cd sniproxy/src
+		19.4) Start sniproxy with ./sniproxy -c /etc/sniproxy.conf
 		
 
 	Optional A) Monitor Through nload
