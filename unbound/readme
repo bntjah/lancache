@@ -1,0 +1,2 @@
+If you are running UNBOUND as your primary DNS
+  copy everything from this folder to /etc/unbound/ and then restart bind
