@@ -4,7 +4,9 @@ LAN-Cache v1.1.3
 Based off work of https://gitlab.com/frag-o-matic/lan-cache
 So Credits go to Bruno Gysels and MultiPlay.co.uk for the base they made!
 
-Credits for this work of art as of 24 Febr. 2016 is to NexusofDoom !!!
+## Short Changelog
+2-24-2016 bn_: Added improvements / Ideas from Nexusofdoom
+1-4-2017 bn_: Added unbound config | dividing the installation of DNS resolver into the corresponding folders
 
 OS: Debian 8.5 x64 (Jessie)
 
@@ -87,8 +89,6 @@ If you are to lazy to read below you can use the script I created for this: http
 		address 10.0.1.21
 		netmask 255.255.0.0
 
-	Note to self: Should make a script for the Step 10)
-	hosts file, bind config and necessary individual edits to db.* files should be mentioned.
 	10) Create the user lancache
 		sudo adduser --system --no-create-home lancache
 		sudo addgroup --system lancache
