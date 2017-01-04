@@ -16,7 +16,8 @@ Come visit us @ www.cu-lan.be | www.gunsnbits.de | www.discoverpc.net/
 			- Added unbound config
 			- Dividing the installation of DNS resolver into the corresponding folders. 
 			- Added a few new dns names for Riot
-			- Noticed that the hosts was written down what to do; added that lign
+			- Noticed that the hosts was written down what to do; added that
+			- Changed a few things to make Logs a bith more clear / transparent
 
 OS: Debian 8.5 x64 (Jessie)
 
@@ -115,11 +116,13 @@ If you are to lazy to read below you can use the script I created for this: http
 		sudo mkdir -p /srv/lancache/data/riot/
 		sudo mkdir -p /srv/lancache/data/sony/
 		sudo mkdir -p /srv/lancache/data/steam/
-		sudo mkdir -p /srv/lancache/logs
 		sudo mkdir -p /srv/lancache/data/wargaming
 		sudo mkdir -p /srv/lancache/data/tera
 		sudo mkdir -p /srv/lancache/data/arenanetworks
-		
+		sudo mkdir -p /srv/lancache/logs/Errors
+		sudo mkdir -p /srv/lancache/logs/Keys
+		sudo mkdir -p /srv/lancache/logs/Access
+
 	- 11.1 chowning can be achieved by: 
 		sudo chown -R lancache:lancache /srv/lancache
 
