@@ -3,6 +3,7 @@ LAN-Cache v1.1.4
 
 Based off work of https://gitlab.com/frag-o-matic/lan-cache
 So Credits go to Bruno Gysels and MultiPlay.co.uk for the base they made!
+
 Come visit us @ www.cu-lan.be | www.gunsnbits.de | www.discoverpc.net/
 
 ## Short Changelog
