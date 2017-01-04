@@ -1,0 +1,1 @@
+If you are running bind copy everything from this folder to /etc/bind/ and then restart bind
