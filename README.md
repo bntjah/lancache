@@ -1,27 +1,42 @@
-LAN-Cache v1.1.4
+LAN-Cache v1.2-unbound
 ==============
 
 Based off work of https://gitlab.com/frag-o-matic/lan-cache
-So Credits go to Bruno Gysels and MultiPlay.co.uk for the base they made!
+So credits go to Bruno Gysels and MultiPlay.co.uk for the base they made!
 
 Come visit us @ www.cu-lan.be | www.gunsnbits.de | www.discoverpc.net/
 
 ## Short Changelog
 *2-24-2016 bn_:
-
 			- Added improvements / Ideas from Nexusofdoom
 
-*1-4-2017 bn_: 
-
+*1-4-2017 bn_:
 			- Added unbound config
 			- Dividing the installation of DNS resolver into the corresponding folders. 
 			- Added a few new dns names for Riot
 			- Noticed that the hosts was written down what to do; added that
 			- Changed a few things to make Logs a bith more clear / transparent
 
-OS: Debian 8.5 x64 (Jessie)
+*1-8-2017 fh:
+            General:
+            - Templated hosts file (as it was in "installer" branch)
+            - Updated configuration to be compatible with fhibler/lc-installer (forked from bntjah/lc-installer)
+            DNS:
+            - Replaced bind9 with unbound
+            - Improvements and fixes to unbound configuration
+            HTTPS:
+            - Incorporated sniproxy
 
-If you are to lazy to read below you can use the script I created for this: https://github.com/bntjah/lc-installer (warning might contain bugs! So proceed on your own accord!)
+OS: Debian 8.6 amd64 (Jessie)
+
+This repository contains instructions and configuration details for the a service, which is used for caching binary Gaming content for lan parties.
+It is part of the repository https://github.com/bntjah/lc-installer and is used as submodule of it. Of course it can be used standalone as well,
+although please be aware that the configuration files are mostly templated and therefore have to be changed manually for the use in different environments.
+
+The quickest and easiest way ot get lancache up and running is the use of:
+https://github.com/bntjah/lc-installer (warning might contain bugs! So proceed on your own accord!)
+
+If you want to setup it manually, please follow the instructions below:
 
 	1) sudo apt-get install build-essential libpcre3 libpcre3-dev zlib1g-dev libreadline-dev libncurses5-dev git libssl-dev
 	2) sudo nano /etc/dhcp/dhclient.conf

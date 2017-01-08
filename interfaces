@@ -1,0 +1,72 @@
+# Regular host IP
+auto lc-host-vint
+    iface lc-host-vint inet static
+    address lc-host-ip
+    netmask lc-host-netmask
+    gateway lc-host-gateway
+
+# IP used for Steam caching
+auto lc-host-vint:1
+    iface lc-host-vint:1 inet static
+    address lc-host-steam
+    netmask lc-host-netmask
+
+# IP used for Riot caching
+auto lc-host-vint:2
+    iface lc-host-vint:2 inet static
+    address lc-host-riot
+    netmask lc-host-netmask
+
+# IP used for Blizzard caching
+auto lc-host-vint:3
+    iface lc-host-vint:3 inet static
+    address lc-host-blizzard
+    netmask lc-host-netmask
+
+# IP used for Hirez caching
+auto lc-host-vint:4
+    iface lc-host-vint:4 inet static
+    address lc-host-hirez
+    netmask lc-host-netmask
+
+# IP used for Origin caching    
+auto lc-host-vint:5
+    iface lc-host-vint:5 inet static
+    address lc-host-origin
+    netmask lc-host-netmask
+
+# IP used for Sony caching
+auto lc-host-vint:6
+    iface lc-host-vint:6 inet static
+    address lc-host-sony
+    netmask lc-host-netmask
+
+# IP used for Microsoft caching
+auto lc-host-vint:7
+    iface lc-host-vint:7 inet static
+    address lc-host-microsoft
+    netmask lc-host-netmask
+
+# IP used for Tera caching
+auto lc-host-vint:8
+    iface lc-host-vint:8 inet static
+    address lc-host-tera
+    netmask lc-host-netmask
+
+# IP used for GOG caching
+auto lc-host-vint:9
+    iface lc-host-vint:9 inet static
+    address lc-host-gog
+    netmask lc-host-netmask
+
+# IP used for ArenaNetworks caching
+auto lc-host-vint:10
+    iface lc-host-vint:10 inet static
+    address lc-host-arenanetworks
+    netmask lc-host-netmask
+
+# IP used for WarGaming caching
+auto lc-host-vint:11
+    iface lc-host-vint:11 inet static
+    address lc-host-wargaming
+    netmask lc-host-netmask
