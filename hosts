@@ -2,9 +2,9 @@
 127.0.1.1       lc-hostname
 
 # The following lines are desirable for IPv6 capable hosts
-::1     localhost ip6-localhost ip6-loopback
-ff02::1 ip6-allnodes
-ff02::2 ip6-allrouters
+# ::1     localhost ip6-localhost ip6-loopback
+# ff02::1 ip6-allnodes
+# ff02::2 ip6-allrouters
 
 127.1.0.1       lancache-origin-backend
 127.1.0.2       lancache-blizzard-backend
