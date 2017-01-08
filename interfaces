@@ -62,7 +62,7 @@ auto lc-host-vint:9
 # IP used for ArenaNetworks caching
 auto lc-host-vint:10
     iface lc-host-vint:10 inet static
-    address lc-host-arenanetworks
+    address lc-host-arena
     netmask lc-host-netmask
 
 # IP used for WarGaming caching
