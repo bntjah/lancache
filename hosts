@@ -1,26 +1,26 @@
 127.0.0.1       localhost
-127.0.1.1       Bender-VM
+127.0.1.1       lc-hostname
 
 # The following lines are desirable for IPv6 capable hosts
-::1     localhost ip6-localhost ip6-loopback
-ff02::1 ip6-allnodes
-ff02::2 ip6-allrouters
+# ::1     localhost ip6-localhost ip6-loopback
+# ff02::1 ip6-allnodes
+# ff02::2 ip6-allrouters
 
 127.1.0.1       lancache-origin-backend
 127.1.0.2       lancache-blizzard-backend
 
 #This is the primary IP (of the network card / eth) that your Lancache is using
-192.168.1.89 lancache-eth
+lc-host-proxybind lancache-eth
 
 #The Following are Virtual IP's used by Lancache
-192.168.1.91 lancache-steam
-192.168.1.92 lancache-riot
-192.168.1.93 lancache-blizzard
-192.168.1.94 lancache-hirez
-192.168.1.95 lancache-origin
-192.168.1.96 lancache-sony
-192.168.1.97 lancache-microsoft
-192.168.1.98 lancache-tera
-192.168.1.99 lancache-gog
-192.168.1.90 lancache-arenanetworks
-192.168.1.70 lancache-wargaming
+lc-host-arena lancache-arenanetworks
+lc-host-blizzard lancache-blizzard
+lc-host-hirez lancache-hirez
+lc-host-gog lancache-gog
+lc-host-microsoft lancache-microsoft
+lc-host-origin lancache-origin
+lc-host-riot lancache-riot
+lc-host-sony lancache-sony
+lc-host-steam lancache-steam
+lc-host-tera lancache-tera
+lc-host-wargaming lancache-wargaming

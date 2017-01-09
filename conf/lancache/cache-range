@@ -1,0 +1,3 @@
+proxy_set_header Range $http_range;
+proxy_set_header If-Range $http_if_range;
+include lancache/cache-key-range;

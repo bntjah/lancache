@@ -1,2 +1,0 @@
-If you are running BIND as your primary DNS
-  copy everything from this folder to /etc/bind/ and then restart bind

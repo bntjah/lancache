@@ -15,4 +15,3 @@ add_header X-Upstream-Cache-Status $upstream_cache_status;
 
 # New settings - 2014-04-12 (i52)
 proxy_ignore_client_abort on;
-
