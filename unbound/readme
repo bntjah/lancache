@@ -1,2 +1,5 @@
 If you are running UNBOUND as your primary DNS
   copy everything from this folder to /etc/unbound/ and then restart unbound
+    Change the following line
+                        interface: lc-host-ip
+    So that it matches the interface beeing used
