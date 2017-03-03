@@ -21,4 +21,4 @@ proxy_cache_path /srv/lancache/data/arenanetworks levels=2:2 keys_zone=arenanetw
 proxy_cache_path /srv/lancache/data/gog levels=2:2 keys_zone=gog:500m inactive=120d max_size=50000m loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
 
 #Based of Steamcache CDN Uplay
-proxy_cache_path /srv/lancache/data/ubisoft levels=2:2 keys_zone=ubisoft:500m inactive=120d max_size=50000m loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
+proxy_cache_path /srv/lancache/data/uplay levels=2:2 keys_zone=uplay:500m inactive=120d max_size=50000m loader_files=1000 loader_sleep=50ms loader_threshold=300ms;

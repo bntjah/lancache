@@ -125,6 +125,12 @@ auto eth0:11
 iface eth0:11 inet static
 address 10.0.1.21
 netmask 255.255.0.0
+
+# Ip used for Uplay caching
+auto eth0:12
+iface eth0:12 inet static
+address 10.0.1.22
+netmask 255.255.0.0
 ```
 
 	5) Create the user lancache
