@@ -30,6 +30,12 @@ OS: Debian 8.6 amd64 (Jessie)
         * Added additional domains for various CDNs
     * HTTPS
         * Incorporated sniproxy
+* 3-2-2017 bn_ & raz3r83
+    * General
+        * Updated the caches for Uplay CDN
+    * DNS
+        * Added additional domains for Uplay CDN
+	
 
 ## Installation
 
