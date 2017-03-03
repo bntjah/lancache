@@ -1,10 +1,10 @@
-# riot
+# Uplay
 server {
     listen lancache-uplay deferred default;
     server_name ubi _;
-    access_log /srv/lancache/logs/Access/ubisoft.log main buffer=128k flush=1m;
-    access_log /srv/lancache/logs/Keys/ubisoft.log keys_range buffer=128k flush=1m;
-    error_log /srv/lancache/logs/Errors/ubisoft.log;
+    access_log /srv/lancache/logs/Access/uplay.log main buffer=128k flush=1m;
+    access_log /srv/lancache/logs/Keys/uplay.log keys_range buffer=128k flush=1m;
+    error_log /srv/lancache/logs/Errors/uplay.log;
 
     # Default Node
     include lancache/resolver;
@@ -17,7 +17,7 @@ server {
         proxy_bind lc-host-proxybind;
         #testing cache of 200 value
         #proxy_cache_valid 200 90d; proxy_cache_valid 206 90d;
-        proxy_cache ubisoft;
+        proxy_cache uplay;
         proxy_read_timeout 150;
         include lancache/proxy-cache;
         include lancache/cache-range;
