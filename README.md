@@ -35,7 +35,9 @@ OS: Debian 8.6 amd64 (Jessie)
         * Updated the caches for Uplay CDN
     * DNS
         * Added additional domains for Uplay CDN
-	
+* 3-2-2017 bn_ & Nexusofdoom
+    * DNS
+        * Added additional domain for Blizzard CDN	
 
 ## Installation
 
