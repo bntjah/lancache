@@ -61,11 +61,12 @@ If you want to install it manually, please follow the instructions below:
 
 	3) Install nginx
 	   curl http://nginx.org/download/nginx-1.11.8.tar.gz | tar zx
-       ./configure --with-http_ssl_module --with-http_slice_module
-       make
-       sudo make install
+	   cd ngnix-1.11.8
+       	   ./configure --with-http_ssl_module --with-http_slice_module
+           make
+           sudo make install
 
-	4) Add the virtual interfaces (used for caching in nginx) to /etc/net/interfaces
+	4) Add the virtual interfaces (used for caching in nginx) to /etc/network/interfaces
 
 ```
 # Ip used for STEAM caching
@@ -194,8 +195,9 @@ netmask 255.255.0.0
 	14) Install sniproxy for passing through HTTPS traffic (cannot be cached)
 		14.1) git clone https://github.com/dlundquist/sniproxy
 		14.2) sudo curl https://raw.githubusercontent.com/OpenSourceLAN/origin-docker/master/sniproxy/sniproxy.conf -o /etc/sniproxy.conf
-		19.3) cd sniproxy/src
-		19.4) Start sniproxy with ./sniproxy -c /etc/sniproxy.conf
+		19.3) cd sniproxy
+		19.4) ./autogen.sh && ./configure && make check && sudo make install
+		19.5) Start sniproxy with ./sniproxy -c /etc/sniproxy.conf
 
 	15) Copy the unbound configuration from unbound/unbound.conf to /etc/unbound/unbound.conf
 	15.1) Replace the interfaces: section with the normal ip (not the virtual ones)
