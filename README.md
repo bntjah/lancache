@@ -62,9 +62,9 @@ If you want to install it manually, please follow the instructions below:
 	3) Install nginx
 	   curl http://nginx.org/download/nginx-1.11.8.tar.gz | tar zx
 	   cd ngnix-1.11.8
-       	   ./configure --with-http_ssl_module --with-http_slice_module
-           make
-           sudo make install
+	   ./configure --with-http_ssl_module --with-http_slice_module
+	   make
+	   sudo make install
 
 	4) Add the virtual interfaces (used for caching in nginx) to /etc/network/interfaces
 
