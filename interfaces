@@ -75,4 +75,4 @@ auto lc-host-vint:11
 auto lc-host-vint:12
     iface lc-host-vint:12 inet static
     address lc-host-uplay
-    netmask lc-host-uplay   
+    netmask lc-host-netmask 
