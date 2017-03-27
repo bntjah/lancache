@@ -28,10 +28,9 @@ OS: Debian 8.6 amd64 (Jessie)
     * DNS
         * Added additional domain for Blizzard CDN	
 * 3-27-2017 Travispk
-    * DNS
-        * Cleaned up Readme
-	* Cleaned up interfaces
-	* Made some tweaks to unbound.conf to make it faster and lower the TTL if changes are necessary during event
+    * Cleaned up Readme
+    * Cleaned up interfaces
+    * Made some tweaks to unbound.conf to make it faster and lower the TTL if changes are necessary during event
 ## Installation
 
 ### Quick Installation on a clean Debian
