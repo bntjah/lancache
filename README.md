@@ -9,17 +9,6 @@ Come visit us @ www.cu-lan.be | www.gunsnbits.de | www.discoverpc.net/
 OS: Debian 8.6 amd64 (Jessie)
 
 ## Short Changelog
-
-* 2-24-2016 bn_
-  * Added improvements / Ideas from Nexusofdoom
-
-* 1-4-2017 bn_
-	* Added unbound config
-	* Dividing the installation of DNS resolver into the corresponding folders.
-	* Added a few new dns names for Riot
-	* Noticed that the hosts was written down what to do; added that
-	* Changed a few things to make Logs a bith more clear / transparent
-
 * 1-8-2017 fh
     * General
         * Templated hosts file (as it was in "installer" branch)
