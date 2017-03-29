@@ -4,7 +4,7 @@ LAN-Cache v1.2-unbound
 Based off work of https://gitlab.com/frag-o-matic/lan-cache
 So credits go to Bruno Gysels and MultiPlay.co.uk for the base they made!
 
-Come visit us @ www.cu-lan.be | www.gunsnbits.de | www.discoverpc.net/
+Come visit us @ www.cu-lan.be | www.gunsnbits.de | www.discoverpc.net/ | https://lanfest.intel.com/netwar
 
 OS: Debian 8.6 amd64 (Jessie)
 
