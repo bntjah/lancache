@@ -31,6 +31,9 @@ OS: Debian 8.6 amd64 (Jessie)
     * Cleaned up Readme
     * Cleaned up interfaces
     * Made some tweaks to unbound.conf to make it faster and lower the TTL if changes are necessary during event
+* 3-30-2017 Travispk
+    * Cleaned up hosts to be in a more logical order
+    
 ## Installation
 
 ### Quick Installation on a clean Debian
