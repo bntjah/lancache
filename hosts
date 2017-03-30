@@ -13,15 +13,15 @@
 lc-host-proxybind lancache-eth
 
 #The Following are Virtual IP's used by Lancache
-lc-host-arena lancache-arenanetworks
+lc-host-steam lancache-steam
+lc-host-riot lancache-riot
 lc-host-blizzard lancache-blizzard
 lc-host-hirez lancache-hirez
-lc-host-gog lancache-gog
-lc-host-microsoft lancache-microsoft
 lc-host-origin lancache-origin
-lc-host-riot lancache-riot
 lc-host-sony lancache-sony
-lc-host-steam lancache-steam
+lc-host-microsoft lancache-microsoft
 lc-host-tera lancache-tera
-lc-host-uplay lancache-uplay
+lc-host-gog lancache-gog
+lc-host-arena lancache-arenanetworks
 lc-host-wargaming lancache-wargaming
+lc-host-uplay lancache-uplay
