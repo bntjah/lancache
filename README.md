@@ -18,7 +18,7 @@ OS: Debian 8.6 amd64 (Jessie)
 * 6-19-2017 Nexusofdoom
     * Made some changes to Windows updates
     * Provided working solution for OSX updates
-    * bn_: Added them to installer
+    * bn_: Added them to installer & made seperate changelog
     
 ## Installation
 
