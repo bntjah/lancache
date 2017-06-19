@@ -33,7 +33,7 @@ OS: Debian 8.6 amd64 (Jessie)
     * Made some tweaks to unbound.conf to make it faster and lower the TTL if changes are necessary during event
 * 3-30-2017 Travispk
     * Cleaned up hosts to be in a more logical order
-* 6-19-2017 Travispk
+* 6-19-2017 Nexusofdoom
     * Made some changes to Windows updates
     * Provided working solution for OSX updates
     
