@@ -9,24 +9,6 @@ Come visit us @ www.cu-lan.be | www.gunsnbits.de | www.discoverpc.net/ | https:/
 OS: Debian 8.6 amd64 (Jessie)
 
 ## Short Changelog
-* 1-8-2017 fh
-    * General
-        * Templated hosts file (as it was in "installer" branch)
-        * Updated configuration to be compatible with fhibler/lc-installer (forked from bntjah/lc-installer)
-    * DNS
-        * Replaced bind9 with unbound
-        * Improvements and fixes to unbound configuration
-        * Added additional domains for various CDNs
-    * HTTPS
-        * Incorporated sniproxy
-* 3-2-2017 bn_ & raz3r83
-    * General
-        * Updated the caches for Uplay CDN
-    * DNS
-        * Added additional domains for Uplay CDN
-* 3-7-2017 bn_ & Nexusofdoom
-    * DNS
-        * Added additional domain for Blizzard CDN	
 * 3-27-2017 Travispk
     * Cleaned up Readme
     * Cleaned up interfaces
@@ -36,6 +18,7 @@ OS: Debian 8.6 amd64 (Jessie)
 * 6-19-2017 Nexusofdoom
     * Made some changes to Windows updates
     * Provided working solution for OSX updates
+    * bn_: Added them to installer
     
 ## Installation
 
