@@ -76,3 +76,9 @@ auto lc-host-vint:12
     iface lc-host-vint:12 inet static
     address lc-host-uplay
     netmask lc-host-netmask 
+    
+# IP used for Uplay caching
+auto lc-host-vint:13
+    iface lc-host-vint:13 inet static
+    address lc-host-apple
+    netmask lc-host-netmask 
