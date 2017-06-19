@@ -1,0 +1,28 @@
+* 1-8-2017 fh
+    * General
+        * Templated hosts file (as it was in "installer" branch)
+        * Updated configuration to be compatible with fhibler/lc-installer (forked from bntjah/lc-installer)
+    * DNS
+        * Replaced bind9 with unbound
+        * Improvements and fixes to unbound configuration
+        * Added additional domains for various CDNs
+    * HTTPS
+        * Incorporated sniproxy
+* 3-2-2017 bn_ & raz3r83
+    * General
+        * Updated the caches for Uplay CDN
+    * DNS
+        * Added additional domains for Uplay CDN
+* 3-7-2017 bn_ & Nexusofdoom
+    * DNS
+        * Added additional domain for Blizzard CDN	
+* 3-27-2017 Travispk
+    * Cleaned up Readme
+    * Cleaned up interfaces
+    * Made some tweaks to unbound.conf to make it faster and lower the TTL if changes are necessary during event
+* 3-30-2017 Travispk
+    * Cleaned up hosts to be in a more logical order
+* 6-19-2017 Nexusofdoom
+    * Made some changes to Windows updates
+    * Provided working solution for OSX updates
+    * bn_: Added them to installer
