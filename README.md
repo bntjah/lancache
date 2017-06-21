@@ -20,6 +20,8 @@ OS: Debian 8.6 amd64 (Jessie)
     * Nexus: Provided working solution for OSX updates
     * bn_: Added them to installer & made seperate changelog
     * bn_: Added some minor tweaks to nginx as suggested in issues to counter bursty performance
+* 6-211-2017 bn_
+    * bn_: Added the necessary things as remarked by It0w in issues. Thanks for letting us know we forgot something!
     
 ## Installation
 
@@ -44,7 +46,7 @@ If you want to install it manually, please follow the instructions below:
 	3) Install nginx
 	   curl http://nginx.org/download/nginx-1.11.8.tar.gz | tar zx
 	   cd ngnix-1.11.8
-	   ./configure --with-http_ssl_module --with-http_slice_module
+	   ./configure --with-http_ssl_module --with-http_slice_module --with-file-aio --with-threads
 	   make
 	   sudo make install
 
