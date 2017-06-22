@@ -1,7 +1,7 @@
 proxy_cache_path /srv/lancache/data/installs levels=2:2 keys_zone=installs:500m inactive=120d max_size=972800m loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
 proxy_cache_path /srv/lancache/data/other levels=2:2 keys_zone=other:100m inactive=72h max_size=10240m;
 
-proxy_temp_path /srv/lancache/data/tmp;
+proxy_temp_path /srv/lancache/data/tmp/ 1 2;
 
 proxy_cache_path /srv/lancache/data/blizzard levels=2:2 keys_zone=blizzard:500m inactive=120d max_size=100000m loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
 proxy_cache_path /srv/lancache/data/steam levels=2:2 keys_zone=steam:500m inactive=120d max_size=5000000m loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
