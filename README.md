@@ -9,10 +9,6 @@ Come visit us @ www.cu-lan.be | www.gunsnbits.de | www.discoverpc.net/ | https:/
 OS: Debian 8.6 amd64 (Jessie)
 
 ## Short Changelog
-* 3-27-2017 Travispk
-    * Cleaned up Readme
-    * Cleaned up interfaces
-    * Made some tweaks to unbound.conf to make it faster and lower the TTL if changes are necessary during event
 * 3-30-2017 Travispk
     * Cleaned up hosts to be in a more logical order
 * 6-19-2017 Nexusofdoom & bn_
@@ -22,6 +18,8 @@ OS: Debian 8.6 amd64 (Jessie)
     * bn_: Added some minor tweaks to nginx as suggested in issues to counter bursty performance
 * 6-211-2017 bn_
     * bn_: Added the necessary things as remarked by It0w in issues. Thanks for letting us know we forgot something!
+* 6-30-2017 saambd
+    * Added missing } on line 56 of Microsoft conf    
     
 ## Installation
 
