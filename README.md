@@ -9,17 +9,17 @@ Come visit us @ www.cu-lan.be | www.gunsnbits.de | www.discoverpc.net/ | https:/
 OS: Debian 8.6 amd64 (Jessie)
 
 ## Short Changelog
-* 3-30-2017 Travispk
-    * Cleaned up hosts to be in a more logical order
 * 6-19-2017 Nexusofdoom & bn_
     * Nexus: Made some changes to Windows updates
     * Nexus: Provided working solution for OSX updates
     * bn_: Added them to installer & made seperate changelog
     * bn_: Added some minor tweaks to nginx as suggested in issues to counter bursty performance
-* 6-211-2017 bn_
+* 6-21-2017 bn_
     * bn_: Added the necessary things as remarked by It0w in issues. Thanks for letting us know we forgot something!
 * 6-30-2017 saambd
     * Added missing } on line 56 of Microsoft conf    
+* 8-03-2017 bn_
+    * Added 2 Steam URLs to Unbound.Conf as posted in Multiplay Github
     
 ## Installation
 
