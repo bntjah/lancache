@@ -30,4 +30,6 @@
 * 6-21-2017 bn_
     * bn_: Added the necessary things as remarked by It0w in issues. Thanks for letting us know we forgot something!
 * 6-30-2017 saambd
-    * Added missing } on line 56 of Microsoft conf
+    * Added missing } on line 56 of Microsoft conf* 8-03-2017 bn_
+* 8-03-2017 bn_    
+    * Added 2 Steam URLs to Unbound.Conf as posted in Multiplay Github
