@@ -42,8 +42,8 @@ If you want to install it manually, please follow the instructions below:
 	   git clone -b master http://github.com/bntjah/lancache
 
 	3) Install nginx
-	   curl http://nginx.org/download/nginx-1.11.8.tar.gz | tar zx
-	   cd ngnix-1.11.8
+	   curl http://nginx.org/download/nginx-1.13.4.tar.gz | tar zx
+	   cd ngnix-1.13.4
 	   ./configure --with-http_ssl_module --with-http_slice_module --with-file-aio --with-threads
 	   make
 	   sudo make install
