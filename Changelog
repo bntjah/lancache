@@ -35,4 +35,5 @@
     * Added 2 Steam URLs to Unbound.Conf as posted in Multiplay Github
 * 10-17-2017 bn_    
     * Added Sony DNS to Unbound.Conf as posted by Muffeee in issues
+    * Added Glyph Support (Still needs testing)
 
