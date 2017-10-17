@@ -122,6 +122,18 @@ auto eth0:12
 iface eth0:12 inet static
 address 10.0.1.22
 netmask 255.255.0.0
+
+# Ip used for Apple caching
+auto eth0:13
+iface eth0:13 inet static
+address 10.0.1.23
+netmask 255.255.0.0
+
+# Ip used for Glyph caching
+auto eth0:14
+iface eth0:14 inet static
+address 10.0.1.24
+netmask 255.255.0.0
 ```
 
 	5) Create the user lancache
@@ -145,6 +157,7 @@ netmask 255.255.0.0
 		sudo mkdir -p /srv/lancache/data/tera
 		sudo mkdir -p /srv/lancache/data/arenanetworks
 		sudo mkdir -p /srv/lancache/data/uplay
+		sudo mkdir -p /srv/lancache/data/glyph
 		sudo mkdir -p /srv/lancache/logs/Errors
 		sudo mkdir -p /srv/lancache/logs/Keys
 		sudo mkdir -p /srv/lancache/logs/Access
