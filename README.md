@@ -20,6 +20,9 @@ OS: Debian 8.6 amd64 (Jessie)
     * Added missing } on line 56 of Microsoft conf    
 * 8-03-2017 bn_
     * Added 2 Steam URLs to Unbound.Conf as posted in Multiplay Github
+* 10-17-2017 bn_    
+    * Added Sony DNS to Unbound.Conf as posted by Muffeee in issues
+    * Added Glyph Support (Still needs testing)
     
 ## Installation
 
