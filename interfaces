@@ -64,23 +64,23 @@ auto lc-host-vint:10
     iface lc-host-vint:10 inet static
     address lc-host-arena
     netmask lc-host-netmask
-
-# IP used for WarGaming caching
+    
+# IP used for Apple caching
 auto lc-host-vint:11
+    iface lc-host-vint:13 inet static
+    address lc-host-apple
+    netmask lc-host-netmask 
+    
+# IP used for WarGaming caching
+auto lc-host-vint:12
     iface lc-host-vint:11 inet static
     address lc-host-wargaming
     netmask lc-host-netmask
-    
-# IP used for Uplay caching
-auto lc-host-vint:12
-    iface lc-host-vint:12 inet static
-    address lc-host-uplay
-    netmask lc-host-netmask 
-    
+
 # IP used for Uplay caching
 auto lc-host-vint:13
-    iface lc-host-vint:13 inet static
-    address lc-host-apple
+    iface lc-host-vint:12 inet static
+    address lc-host-uplay
     netmask lc-host-netmask 
     
 # IP used for Glyph caching
