@@ -18,8 +18,9 @@ OS: Debian 8.6 amd64 (Jessie)
 * 10-17-2017 bn_    
     * Added Sony DNS to Unbound.Conf as posted by Muffeee in issues
     * Added Glyph Support (Still needs testing)
-* 10-25-2017 bn_ 
+* 10-25-2017 Nagilum99 & Nexusofdoom
     * Merged the pull request from nagilum99 to correct / standardize the layout (Issue #65)
+    * Changed Steamconfig as problem and solution posted by Nexusofdoom (Issue #61)
     
 ## Installation
 
