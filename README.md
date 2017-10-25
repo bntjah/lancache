@@ -21,7 +21,15 @@ OS: Debian 8.6 amd64 (Jessie)
 * 10-25-2017 Nagilum99 & Nexusofdoom
     * Merged the pull request from nagilum99 to correct / standardize the layout (Issue #65)
     * Changed Steamconfig as problem and solution posted by Nexusofdoom (Issue #61)
-    
+
+## Important!
+If you already have an installation of nginx installed via apt-get install nginx, it is necessary that you remove it, the configuration files and all recommended packagaes via:
+apt-get purge nginx
+apt-get autoremove
+
+Otherwise nginx may not start with lancache start script, instead run as wrong user and load /etc/nginx/nginx.conf.
+It results in not proxying and leaving entries in /var/log/nginx/...
+
 ## Installation
 
 ### Quick Installation on a clean Debian
@@ -112,19 +120,19 @@ iface eth0:10 inet static
 address 10.0.1.20
 netmask 255.255.0.0
 
-# Ip used for WarGaming caching
+# IP used for Apple caching
 auto eth0:11
 iface eth0:11 inet static
 address 10.0.1.21
 netmask 255.255.0.0
 
-# Ip used for Uplay caching
+# IP used for WarGaming caching
 auto eth0:12
 iface eth0:12 inet static
 address 10.0.1.22
 netmask 255.255.0.0
 
-# Ip used for Apple caching
+# IP used for Uplay caching
 auto eth0:13
 iface eth0:13 inet static
 address 10.0.1.23
