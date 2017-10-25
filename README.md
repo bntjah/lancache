@@ -9,11 +9,6 @@ Come visit us @ www.cu-lan.be | www.gunsnbits.de | www.discoverpc.net/ | https:/
 OS: Debian 8.6 amd64 (Jessie)
 
 ## Short Changelog
-* 6-19-2017 Nexusofdoom & bn_
-    * Nexus: Made some changes to Windows updates
-    * Nexus: Provided working solution for OSX updates
-    * bn_: Added them to installer & made seperate changelog
-    * bn_: Added some minor tweaks to nginx as suggested in issues to counter bursty performance
 * 6-21-2017 bn_
     * bn_: Added the necessary things as remarked by It0w in issues. Thanks for letting us know we forgot something!
 * 6-30-2017 saambd
@@ -23,6 +18,8 @@ OS: Debian 8.6 amd64 (Jessie)
 * 10-17-2017 bn_    
     * Added Sony DNS to Unbound.Conf as posted by Muffeee in issues
     * Added Glyph Support (Still needs testing)
+* 10-25-2017 bn_ 
+    * Merged the pull request from nagilum99 to correct / standardize the layout (Issue #65)
     
 ## Installation
 
