@@ -5,6 +5,7 @@ Based off work of https://gitlab.com/frag-o-matic/lan-cache
 So credits go to Bruno Gysels and MultiPlay.co.uk for the base they made!
 
 Come visit us @ www.cu-lan.be | www.gunsnbits.de | www.discoverpc.net/ | https://lanfest.intel.com/netwar
+Facebook @ https://www.facebook.com/groups/434599530274923/?notif_id=1509019697563943
 
 OS: Debian 8.6 amd64 (Jessie)
 
