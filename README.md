@@ -213,8 +213,10 @@ netmask 255.255.0.0
 
 	A) Monitor through nload
 	   sudo apt-get install nload -y
-	   sudo nload -U G - u M -i 102400 -o 102400
-
+	   sudo nload -U G -u M -i 102400 -o 102400 (shows bandwith in MByte/s)
+	   or
+	   sudo nload -U G -u m -i 1024000 -o 1024000 (shows bandwith in Mbit/s, scales graph to 1 Gbit/s)
+	   
 	B) Monitor network usage through iftop
 	   sudo apt-get install iftop -y
 	   sudo iftop -i eth0
