@@ -11,8 +11,6 @@ Facebook @ https://www.facebook.com/groups/434599530274923/?notif_id=15090196975
 OS: Debian 8.6 amd64 (Jessie)
 
 ## Short Changelog
-* 6-21-2017 bn_
-    * bn_: Added the necessary things as remarked by It0w in issues. Thanks for letting us know we forgot something!
 * 6-30-2017 saambd
     * Added missing } on line 56 of Microsoft conf    
 * 8-03-2017 bn_
@@ -23,6 +21,8 @@ OS: Debian 8.6 amd64 (Jessie)
 * 10-25-2017 Nagilum99 & Nexusofdoom
     * Merged the pull request from nagilum99 to correct / standardize the layout (Issue #65)
     * Changed Steamconfig as problem and solution posted by Nexusofdoom (Issue #61)
+* 10-28-2017 nexusofdoom
+    * Added 2 Battlenet URLs to Unbound.Conf
 
 ## Important!
 If you already have an installation of nginx installed via apt-get install nginx, it is necessary that you remove it, the configuration files and all recommended packagaes via:
