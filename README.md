@@ -23,6 +23,8 @@ OS: Debian 8.6 amd64 (Jessie)
     * Changed Steamconfig as problem and solution posted by Nexusofdoom (Issue #61)
 * 10-28-2017 nexusofdoom
     * Added 2 Battlenet URLs to Unbound.Conf
+    * Added New Origins URLs to Unbound.Conf
+    * Did some magic in lancache-origin.conf to make it work :-)
 
 ## Important!
 If you already have an installation of nginx installed via apt-get install nginx, it is necessary that you remove it, the configuration files and all recommended packagaes via:
