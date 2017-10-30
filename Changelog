@@ -39,5 +39,7 @@
 * 10-25-2017 Nagilum99 & Nexusofdoom
     * Merged the pull request from nagilum99 to correct / standardize the layout (Issue #65)
     * Changed Steamconfig as problem and solution posted by Nexusofdoom (Issue #61)
-10-28-2017 nexusofdoom
+* 10-28-2017 nexusofdoom
     * Added 2 Battlenet URLs to Unbound.Conf
+    * Added New Origins URLs to Unbound.Conf
+    * Did some magic in lancache-origin.conf to make it work :-)
