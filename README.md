@@ -26,7 +26,7 @@ OS: Debian 8.6 amd64 (Jessie)
     * Added New Origins URLs to Unbound.Conf
     * Did some magic in lancache-origin.conf to make it work :-)
 * 12-4-2017 nexusofdoom
-    * Added Warfram and ESO/Elder Scrolls Online to Config.
+    * Added Warframe and ESO/Elder Scrolls Online to Config.
 
 ## Important!
 If you already have an installation of nginx installed via apt-get install nginx, it is necessary that you remove it, the configuration files and all recommended packagaes via:
