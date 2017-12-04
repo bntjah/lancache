@@ -11,8 +11,8 @@ Facebook @ https://www.facebook.com/groups/434599530274923/?notif_id=15090196975
 OS: Debian 8.6 amd64 (Jessie)
 
 ## Short Changelog
-*12-4-2017 Nexusofdoom
-    *Added Warfram and ESO/Elder Scrolls Online to Config.
+* 12-4-2017 Nexusofdoom
+    * Added Warfram and ESO/Elder Scrolls Online to Config.
 * 6-30-2017 saambd
     * Added missing } on line 56 of Microsoft conf    
 * 8-03-2017 bn_
