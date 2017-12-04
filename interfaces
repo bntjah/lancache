@@ -87,4 +87,17 @@ auto lc-host-vint:13
 auto lc-host-vint:14
     iface lc-host-vint:14 inet static
     address lc-host-glyph
-    netmask lc-host-netmask 
+    netmask lc-host-netmask
+    
+# IP used for ZeniMax caching
+auto eth0:15
+    iface eth0:15 inet static
+    address lc-host-zenimax
+    netmask lc-host-netmask
+    
+# IP used for digitalextremes caching
+auto eth0:16
+    iface eth0:16 inet static
+    address lc-host-digitalextremes
+    netmask lc-host-netmask
+
