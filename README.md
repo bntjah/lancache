@@ -11,8 +11,6 @@ Facebook @ https://www.facebook.com/groups/434599530274923/?notif_id=15090196975
 OS: Debian 8.6 amd64 (Jessie)
 
 ## Short Changelog
-* 12-4-2017 nexusofdoom
-    * Added Warfram and ESO/Elder Scrolls Online to Config.
 * 6-30-2017 saambd
     * Added missing } on line 56 of Microsoft conf    
 * 8-03-2017 bn_
@@ -27,6 +25,8 @@ OS: Debian 8.6 amd64 (Jessie)
     * Added 2 Battlenet URLs to Unbound.Conf
     * Added New Origins URLs to Unbound.Conf
     * Did some magic in lancache-origin.conf to make it work :-)
+* 12-4-2017 nexusofdoom
+    * Added Warfram and ESO/Elder Scrolls Online to Config.
 
 ## Important!
 If you already have an installation of nginx installed via apt-get install nginx, it is necessary that you remove it, the configuration files and all recommended packagaes via:
