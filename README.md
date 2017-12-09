@@ -8,6 +8,8 @@ Come visit us @ www.cu-lan.be | www.gunsnbits.de | www.discoverpc.net/ | https:/
 
 Facebook @ https://www.facebook.com/groups/434599530274923/?notif_id=1509019697563943
 
+Twitter @ https://twitter.com/search?q=%40LAN_CACHE&src=typd
+
 OS: Debian 8.6 amd64 (Jessie)
 
 ## Short Changelog
