@@ -100,4 +100,11 @@ auto eth0:16
     iface eth0:16 inet static
     address lc-host-digitalextremes
     netmask lc-host-netmask
+    
+# IP used for pearlabyss caching
+auto eth0:17
+    iface eth0:17 inet static
+    address lc-host-pearlabyss
+    netmask lc-host-netmask
+    
 
