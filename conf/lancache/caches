@@ -12,7 +12,7 @@ proxy_cache_path /srv/lancache/data/riot levels=2:2 keys_zone=riot:500m inactive
 proxy_cache_path /srv/lancache/data/sony levels=2:2 keys_zone=sony:500m inactive=120d max_size=50000m loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
 
 #Added by Nexusofdoom
-proxy_cache_path /srv/lancache/data/tera levels=2:2 keys_zone=tera:500m inactive=120d max_size=50000m loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
+proxy_cache_path /srv/lancache/data/enmasse levels=2:2 keys_zone=enmasse:500m inactive=120d max_size=50000m loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
 proxy_cache_path /srv/lancache/data/microsoft levels=2:2 keys_zone=microsoft:500m inactive=120d max_size=50000m loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
 proxy_cache_path /srv/lancache/data/wargaming levels=2:2 keys_zone=wargaming:500m inactive=120d max_size=50000m loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
 proxy_cache_path /srv/lancache/data/arenanetworks levels=2:2 keys_zone=arenanetworks:500m inactive=120d max_size=50000m loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
