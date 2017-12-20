@@ -47,10 +47,10 @@ auto lc-host-vint:7
     address lc-host-microsoft
     netmask lc-host-netmask
 
-# IP used for Tera caching
+# IP used for Enmasse caching
 auto lc-host-vint:8
     iface lc-host-vint:8 inet static
-    address lc-host-tera
+    address lc-host-enmasse
     netmask lc-host-netmask
 
 # IP used for GOG caching
