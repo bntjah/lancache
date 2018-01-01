@@ -151,6 +151,24 @@ auto eth0:14
 iface eth0:14 inet static
 address 10.0.1.24
 netmask 255.255.0.0
+
+# IP used for ZeniMax caching
+auto eth0:15
+    iface eth0:15 inet static
+    address 10.0.1.25
+    netmask 255.255.255.0
+    
+# IP used for digitalextremes caching
+auto eth0:16
+    iface eth0:16 inet static
+    address 10.0.1.26
+    netmask 255.255.255.0
+    
+# IP used for pearlabyss caching
+auto eth0:17
+    iface eth0:17 inet static
+    address 10.0.1.27
+    netmask 255.255.255.0
 ```
 
 	5) Create the user lancache
