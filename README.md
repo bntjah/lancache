@@ -193,6 +193,9 @@ auto eth0:17
 		sudo mkdir -p /srv/lancache/data/arenanetworks
 		sudo mkdir -p /srv/lancache/data/uplay
 		sudo mkdir -p /srv/lancache/data/glyph
+		sudo mkdir -p /srv/lancache/data/zenimax
+		sudo mkdir -p /srv/lancache/data/digitalextremes
+		sudo mkdir -p /srv/lancache/data/pearlabyss
 		sudo mkdir -p /srv/lancache/logs/Errors
 		sudo mkdir -p /srv/lancache/logs/Keys
 		sudo mkdir -p /srv/lancache/logs/Access
