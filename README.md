@@ -189,7 +189,6 @@ auto eth0:17
 		sudo mkdir -p /srv/lancache/data/sony/
 		sudo mkdir -p /srv/lancache/data/steam/
 		sudo mkdir -p /srv/lancache/data/wargaming
-		sudo mkdir -p /srv/lancache/data/tera
 		sudo mkdir -p /srv/lancache/data/arenanetworks
 		sudo mkdir -p /srv/lancache/data/uplay
 		sudo mkdir -p /srv/lancache/data/glyph
