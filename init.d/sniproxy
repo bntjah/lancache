@@ -1,134 +1,311 @@
 #!/bin/sh
+
 ### BEGIN INIT INFO
-# Provides:          sniproxy
-# Required-Start:    $network $local_fs $remote_fs $syslog
-# Required-Stop:     $remote_fs $syslog
-# Default-Start:     2 3 4 5
-# Default-Stop:      0 1 6
-# Short-Description: HTTPS SNI Proxy
-# Description:       Proxies incoming HTTP and TLS connections based on the
-#                    hostname contained in the initial request.
+# Provides:           sniproxy
+# Required-Start:     $local_fs $remote_fs $network $syslog $named
+# Required-Stop:      $local_fs $remote_fs $network $syslog $named
+# Default-Start:      2 3 4 5
+# Default-Stop:       0 1 6
+# Short-Description:  sniproxy LSB init script
+# Description:        sniproxy Linux Standards Base compliant init script.
 ### END INIT INFO
 
-# Author: Andreas Loibl <andreas@andreas-loibl.de>
 
-# PATH should only include /usr/* if it runs after the mountnfs.sh script
-PATH=/sbin:/usr/local/sbin:/bin:/usr/bin
-DESC="HTTPS SNI proxy"     # Introduce a short description here
-NAME=sniproxy              # Introduce the short server's name here
-DAEMON=/usr/local/sbin/sniproxy  # Introduce the server's location here
-DAEMON_ARGS=""             # Arguments to run the daemon with
-PIDFILE="/var/run/sniproxy.pid"
-SCRIPTNAME=/etc/init.d/$NAME
-ENABLED=1
+# ----------------------------------------------------------------------------------------------------------------------
+#                                                                                                              Variables
+# ----------------------------------------------------------------------------------------------------------------------
 
-# Exit if the package is not installed
-[ -x $DAEMON ] || exit 0
 
-# Read configuration variable file if it is present
-[ -r /etc/default/$NAME ] && . /etc/default/$NAME
+# The name of the daemon.
+readonly NAME=sniproxy
 
-# Load the VERBOSE setting and other rcS variables
-. /lib/init/vars.sh
+# Arguments that should be passed to the executable.
+DAEMON_ARGS="-c /etc/sniproxy.conf"
 
-# Define LSB log_* functions.
-# Depend on lsb-base (>= 3.0-6) to ensure that this file is present.
-. /lib/lsb/init-functions
+# The path in which to search for the daemon.
+readonly PATH=/usr/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
-#
-# Function that starts the daemon/service
-#
-do_start()
+# Absolute path to the PID file.
+PIDFILE=$(printf -- '%s/run/%s.pid' "$([ -d /run ] || printf -- /var)" "${NAME}")
+
+# Will be set by /lib/init/vars.sh
+VERBOSE=no
+
+
+# ----------------------------------------------------------------------------------------------------------------------
+#                                                                                                            Error Codes
+# ----------------------------------------------------------------------------------------------------------------------
+
+
+readonly EC_INVALID_ARGUMENT=2
+readonly EC_SUPER_USER_ONLY=4
+readonly EC_DAEMON_NOT_FOUND=5
+readonly EC_RELOADING_FAILED=150
+readonly EC_RESTART_STOP_FAILED=151
+readonly EC_RESTART_START_FAILED=152
+readonly EC_START_FAILED=153
+readonly EC_STOP_FAILED=154
+
+
+# ----------------------------------------------------------------------------------------------------------------------
+#                                                                                                              Functions
+# ----------------------------------------------------------------------------------------------------------------------
+
+
+# Exit the script with an error code.
+die()
 {
-	# Return
-	#   0 if daemon has been started
-	#   1 if daemon was already running
-	#   2 if daemon could not be started
-	start-stop-daemon --start --quiet \
-        --pidfile $PIDFILE \
-        --exec $DAEMON --test > /dev/null \
-		|| return 1
-	start-stop-daemon --start --quiet \
-        --pidfile $PIDFILE \
-        --exec $DAEMON -- $DAEMON_ARGS \
-		|| return 2
-	# Add code here, if necessary, that waits for the process to be ready
-	# to handle requests from services started subsequently which depend
-	# on this one.  As a last resort, sleep for some time.
+	log_end_msg $1
+	exit $1
 }
 
-#
-# Function that stops the daemon/service
-#
-do_stop()
+# End the script.
+end()
 {
-	# Return
-	#   0 if daemon has been stopped
-	#   1 if daemon was already stopped
-	#   2 if daemon could not be stopped
-	#   other if a failure occurred
-	start-stop-daemon --stop --quiet \
-        --pidfile $PIDFILE \
-        --retry=TERM/30/KILL/5 --name "$(basename $DAEMON)"
-	RETVAL="$?"
-	[ "$RETVAL" = 2 ] && return 2
-	# Wait for children to finish too if this is a daemon that forks
-	# and if the daemon is only ever run from this initscript.
-	# If the above conditions are not satisfied then add some other code
-	# that waits for the process to drop all resources that could be
-	# needed by services started subsequently.  A last resort is to
-	# sleep for some time.
-	start-stop-daemon --stop --quiet --oknodo \
-        --pidfile $PIDFILE \
-        --retry=0/30/KILL/5 --exec $DAEMON
-	[ "$?" = 2 ] && return 2
-	return "$RETVAL"
+	[ "${VERBOSE}" != no ] && log_end_msg 0
+	exit 0
 }
+
+# Display failure message.
+fail()
+{
+	log_failure_msg "${NAME}" "$1"
+}
+
+# Display informational message.
+info()
+{
+	[ "${VERBOSE}" != no ] && log_daemon_msg "${NAME}" "$1"
+}
+
+# Display success message.
+ok()
+{
+	[ "${VERBOSE}" != no ] && log_success_msg "${NAME}" "$1"
+}
+
+# Display warning message.
+warn()
+{
+	log_warning_msg "${NAME}" "$1"
+}
+
+# Print usage string.
+usage()
+{
+	printf 'Usage: %s {start|stop|restart|try-restart|reload|force-reload|status}\n' "$0"
+}
+
+###
+# Check privileges of caller. This will automatically exit if the caller has insufficient privileges.
+#
+# RETURN:
+#   0 - sufficient privileges
+###
+check_privileges()
+{
+	if [ $(id -u) -ne 0 ]
+	then
+		fail 'super user only!'
+		die ${EC_SUPER_USER_ONLY}
+	fi
+}
+
+###
+# Reloads the service.
+#
+# RETURN:
+#   0 - successfully reloaded
+#   1 - reloading failed
+###
+reload_service()
+{
+	start-stop-daemon --stop --signal HUP ${SSD_OPTIONS}
+}
+
+###
+# Starts the service.
+#
+# RETURN:
+#   0 - successfully started
+#   1 - starting failed
+###
+start_service()
+{
+	start-stop-daemon --start ${SSD_OPTIONS} -- ${DAEMON_ARGS}
+}
+
+###
+# Stops the service.
+#
+# RETURN:
+#   0 - successfully stopped
+#   1 - stopping failed
+###
+stop_service()
+{
+	start-stop-daemon --stop --signal QUIT --retry=TERM/30/KILL/5 ${SSD_OPTIONS}
+}
+
+
+# ----------------------------------------------------------------------------------------------------------------------
+#                                                                                                               Includes
+# ----------------------------------------------------------------------------------------------------------------------
+
+
+# Load the VERBOSE setting and other rcS variables plus any script defaults.
+for INCLUDE in /lib/init/vars.sh /etc/default/${NAME}
+	do [ -r "${INCLUDE}" ] && . "${INCLUDE}"
+done
+
+# Make all variables which are allowed to be altered by the defaults file as read-only.
+readonly DAEMON_ARGS
+readonly PIDFILE
+
+
+# ----------------------------------------------------------------------------------------------------------------------
+#                                                                                                              Bootstrap
+# ----------------------------------------------------------------------------------------------------------------------
+
+
+# Load the LSB log_* functions.
+INCLUDE=/lib/lsb/init-functions
+if [ -r "${INCLUDE}" ]
+then
+	. "${INCLUDE}"
+else
+	printf '%s: unable to load LSB functions, cannot start service.\n' "${NAME}" 1>&2
+	exit ${EC_DAEMON_NOT_FOUND}
+fi
+
+# Make sure only one argument was passed to the script.
+if [ $# -ne 1 ]
+then
+	if [ $# -lt 1 -o "$1" = '' ]
+		then fail 'action not specified.'
+		else fail 'too many arguments.'
+	fi
+	usage 1>&2
+	die ${EC_INVALID_ARGUMENT}
+fi
+readonly ACTION="$1"
+
+# Check if daemon is a recognized program and get absolute path.
+readonly DAEMON=$(command -v "${NAME}")
+if [ ! -x "${DAEMON}" ]
+then
+	if [ "${ACTION}" = 'stop' ]
+	then
+		warn 'executable not found: stop request ignored'
+		end
+	else
+		fail "executable not found: cannot ${ACTION} service"
+		die ${EC_DAEMON_NOT_FOUND}
+	fi
+fi
+
+# Default options for start-stop-daemon command.
+readonly SSD_OPTIONS="--quiet --oknodo --pidfile "${PIDFILE}" --exec "${DAEMON}" --name "${NAME}""
+
+# Determine the service's status.
+#
+#   0 = Program is running
+#   1 = Program is not running and the PID file exists.
+#   2 = Program is not running and a LOCK file exists.
+#   3 = Program is not running.
+#   4 = Unable to determine status.
+start-stop-daemon --status ${SSD_OPTIONS} 2>/dev/null 1>/dev/null
+readonly STATUS=$?
+
+
+# ----------------------------------------------------------------------------------------------------------------------
+#                                                                                                           Handle Input
+# ----------------------------------------------------------------------------------------------------------------------
+
 
 case "$1" in
-  start)
-    test "$ENABLED" != "0" || exit 0
-    [ "$VERBOSE" != no ] && log_daemon_msg "Starting $DESC " "$NAME"
-    do_start
-    case "$?" in
-		0|1) [ "$VERBOSE" != no ] && log_end_msg 0 ;;
-		2) [ "$VERBOSE" != no ] && log_end_msg 1 ;;
-	esac
-  ;;
-  stop)
-	[ "$VERBOSE" != no ] && log_daemon_msg "Stopping $DESC" "$NAME"
-	do_stop
-	case "$?" in
-		0|1) [ "$VERBOSE" != no ] && log_end_msg 0 ;;
-		2) [ "$VERBOSE" != no ] && log_end_msg 1 ;;
-	esac
+
+	# Reload the configuration, if the service is running, otherwise do nothing.
+	force-reload|reload)
+		if [ ${STATUS} -eq 0 ]
+		then
+			info 'reloading configuration ...'
+			reload_service || die ${EC_RELOADING_FAILED}
+		else
+			info 'service not running, nothing to be done.'
+		fi
 	;;
-  status)
-       status_of_proc "$DAEMON" "$NAME" && exit 0 || exit $?
-       ;;
-  restart|force-reload)
-    test "$ENABLED" != "0" || exit 1
-	log_daemon_msg "Restarting $DESC" "$NAME"
-	do_stop
-	case "$?" in
-	  0|1)
-		do_start
-		case "$?" in
-			0) log_end_msg 0 ;;
-			1) log_end_msg 1 ;; # Old process is still running
-			*) log_end_msg 1 ;; # Failed to start
-		esac
-		;;
-	  *)
-	  	# Failed to stop
-		log_end_msg 1
-		;;
-	esac
+
+	# Restart the service, if the service is already running, otherwise start the service.
+	restart)
+		if [ ${STATUS} -eq 0 ]
+		then
+			info 'restarting service ...'
+			stop_service || die ${EC_RESTART_STOP_FAILED}
+			sleep 0.1
+		fi
+		start_service || die ${EC_RESTART_START_FAILED}
 	;;
-  *)
-	echo "Usage: $SCRIPTNAME {start|stop|status|restart|force-reload}" >&2
-	exit 3
+
+	# Start the service, do nothing if it is already running.
+	start)
+		if [ ${STATUS} -eq 0 ]
+		then
+			ok 'already started.'
+		else
+			info 'starting ...'
+			start_service || die ${EC_START_FAILED}
+		fi
 	;;
+
+	# Print service status.
+	#
+	# This can be invoked by any user and has different exit codes:
+	#   0 - running and OK
+	#   1 - dead and /var/run PID file exists
+	#   2 - dead and /var/lock lock file exists
+	#   3 - not running
+	#   4 - unknown
+	status)
+		status_of_proc "${DAEMON}" "${NAME}" || exit $?
+	;;
+
+	# Stop the service, do nothing if it is already stopped.
+	stop)
+		if [ ${STATUS} -eq 0 ]
+		then
+			info 'stopping ...'
+			stop_service || die ${EC_STOP_FAILED}
+		else
+			info 'already stopped.'
+		fi
+	;;
+
+	# Restart the service, if the service is already running, otherwise do nothing.
+	try-restart)
+		check_privileges
+		if [ ${STATUS} -eq 0 ]
+		then
+			info 'restarting service ...'
+			stop_service || die ${EC_RESTART_STOP_FAILED}
+			sleep 0.1
+			start_service || die ${EC_RESTART_START_FAILED}
+		else
+			info 'service not running, nothing to be done.'
+		fi
+	;;
+
+	-h|--help)
+		usage
+	;;
+
+	*)
+		fail "action '${ACTION}' not recognized."
+		usage 1>&2
+		exit ${EC_INVALID_ARGUMENT}
+	;;
+
 esac
 
-:
+end
+
