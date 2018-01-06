@@ -53,7 +53,7 @@ https://github.com/bntjah/lc-installer (warning might contain bugs! So proceed o
 If you want to install it manually, please follow the instructions below:
 
     1) Install the required utilities
-	   sudo apt-get install devscripts curl git unbound build-essential libpcre3 libpcre3-dev zlib1g-dev libreadline-dev libev4 libncurses5-dev git libssl-dev
+	   sudo apt-get install devscripts curl git unbound build-essential libpcre3 libpcre3-dev zlib1g-dev libreadline-dev libev4 libev-dev libncurses5-dev git libssl-dev
 
 	2) Clone the git repo
 	   git clone -b master http://github.com/bntjah/lancache
