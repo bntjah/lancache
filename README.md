@@ -72,85 +72,85 @@ If you want to install it manually, please follow the instructions below:
 auto eth0:1
 iface eth0:1 inet static
 address 10.0.1.11
-netmask 255.255.0.0
+netmask 255.255.255.0
 
 # Ip used for RIOT caching
 auto eth0:2
 iface eth0:2 inet static
 address 10.0.1.12
-netmask 255.255.0.0
+netmask 255.255.255.0
 
 # Ip used for Blizzard caching
 auto eth0:3
 iface eth0:3 inet static
 address 10.0.1.13
-netmask 255.255.0.0
+netmask 255.255.255.0
 
 # Ip used for Hirez caching
 auto eth0:4
 iface eth0:4 inet static
 address 10.0.1.14
-netmask 255.255.0.0
+netmask 255.255.255.0
 
 # Ip used for Origin caching
 auto eth0:5
 iface eth0:5 inet static
 address 10.0.1.15
-netmask 255.255.0.0
+netmask 255.255.255.0
 
 # Ip used for Sony caching
 auto eth0:6
 iface eth0:6 inet static
 address 10.0.1.16
-netmask 255.255.0.0
+netmask 255.255.255.0
 
 # Ip used for Microsoft caching
 auto eth0:7
 iface eth0:7 inet static
 address 10.0.1.17
-netmask 255.255.0.0
+netmask 255.255.255.0
 
 # Ip used for Tera caching
 auto eth0:8
 iface eth0:8 inet static
 address 10.0.1.18
-netmask 255.255.0.0
+netmask 255.255.255.0
 
 # Ip used for GOG caching
 auto eth0:9
 iface eth0:9 inet static
 address 10.0.1.19
-netmask 255.255.0.0
+netmask 255.255.255.0
 
 # Ip used for ArenaNetworks caching
 auto eth0:10
 iface eth0:10 inet static
 address 10.0.1.20
-netmask 255.255.0.0
+netmask 255.255.255.0
 
 # IP used for Apple caching
 auto eth0:11
 iface eth0:11 inet static
 address 10.0.1.21
-netmask 255.255.0.0
+netmask 255.255.255.0
 
 # IP used for WarGaming caching
 auto eth0:12
 iface eth0:12 inet static
 address 10.0.1.22
-netmask 255.255.0.0
+netmask 255.255.255.0
 
 # IP used for Uplay caching
 auto eth0:13
 iface eth0:13 inet static
 address 10.0.1.23
-netmask 255.255.0.0
+netmask 255.255.255.0
 
 # Ip used for Glyph caching
 auto eth0:14
 iface eth0:14 inet static
 address 10.0.1.24
-netmask 255.255.0.0
+netmask 255.255.255.0
 
 # IP used for ZeniMax caching
 auto eth0:15
