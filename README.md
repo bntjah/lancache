@@ -68,6 +68,14 @@ If you want to install it manually, please follow the instructions below:
 	4) Add the virtual interfaces (used for caching in nginx) to /etc/network/interfaces
 
 ```
+# Regular Host IP
+auto eth0
+iface eth0 inet static
+address 10.0.1.2
+netmask 255.255.255.0
+gateway 10.0.1.1
+dns-nameservers 8.8.8.8 8.8.4.4
+
 # Ip used for STEAM caching
 auto eth0:1
 iface eth0:1 inet static
