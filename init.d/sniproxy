@@ -23,7 +23,7 @@ readonly NAME=sniproxy
 DAEMON_ARGS="-c /etc/sniproxy.conf"
 
 # The path in which to search for the daemon.
-readonly PATH=/usr/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+readonly PATH=/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin
 
 # Absolute path to the PID file.
 PIDFILE=$(printf -- '%s/run/%s.pid' "$([ -d /run ] || printf -- /var)" "${NAME}")
