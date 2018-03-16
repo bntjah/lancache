@@ -68,115 +68,115 @@ If you want to install it manually, please follow the instructions below:
 	4) Add the virtual interfaces (used for caching in nginx) to /etc/network/interfaces
 
 ```
-# Regular Host IP
+# Regular host IP
 auto eth0
-iface eth0 inet static
-address 10.0.1.2
-netmask 255.255.255.0
-gateway 10.0.1.1
-dns-nameservers 8.8.8.8 8.8.4.4
+    iface eth0 static
+    address 10.0.1.2
+    netmask 255.255.255.0
+    gateway 10.0.1.1
+    dns-nameservers 8.8.8.8 8.8.4.4
 
-# Ip used for STEAM caching
+# IP used for Steam caching
 auto eth0:1
-iface eth0:1 inet static
-address 10.0.1.11
-netmask 255.255.255.0
+    iface eth0:1 inet static
+    address 10.0.1.3
+    netmask 255.255.255.0
 
-# Ip used for RIOT caching
-auto eth0:2
-iface eth0:2 inet static
-address 10.0.1.12
-netmask 255.255.255.0
+# IP used for Riot caching
+auto lc-host-vint:2
+    iface lc-host-vint:2 inet static
+    address lc-host-riot
+    netmask lc-host-netmask
 
-# Ip used for Blizzard caching
-auto eth0:3
-iface eth0:3 inet static
-address 10.0.1.13
-netmask 255.255.255.0
+# IP used for Blizzard caching
+auto lc-host-vint:3
+    iface lc-host-vint:3 inet static
+    address lc-host-blizzard
+    netmask lc-host-netmask
 
-# Ip used for Hirez caching
-auto eth0:4
-iface eth0:4 inet static
-address 10.0.1.14
-netmask 255.255.255.0
+# IP used for Hirez caching
+auto lc-host-vint:4
+    iface lc-host-vint:4 inet static
+    address lc-host-hirez
+    netmask lc-host-netmask
 
-# Ip used for Origin caching
-auto eth0:5
-iface eth0:5 inet static
-address 10.0.1.15
-netmask 255.255.255.0
+# IP used for Origin caching    
+auto lc-host-vint:5
+    iface lc-host-vint:5 inet static
+    address lc-host-origin
+    netmask lc-host-netmask
 
-# Ip used for Sony caching
-auto eth0:6
-iface eth0:6 inet static
-address 10.0.1.16
-netmask 255.255.255.0
+# IP used for Sony caching
+auto lc-host-vint:6
+    iface lc-host-vint:6 inet static
+    address lc-host-sony
+    netmask lc-host-netmask
 
-# Ip used for Microsoft caching
-auto eth0:7
-iface eth0:7 inet static
-address 10.0.1.17
-netmask 255.255.255.0
+# IP used for Microsoft caching
+auto lc-host-vint:7
+    iface lc-host-vint:7 inet static
+    address lc-host-microsoft
+    netmask lc-host-netmask
 
-# Ip used for Tera caching
-auto eth0:8
-iface eth0:8 inet static
-address 10.0.1.18
-netmask 255.255.255.0
+# IP used for Enmasse caching
+auto lc-host-vint:8
+    iface lc-host-vint:8 inet static
+    address lc-host-enmasse
+    netmask lc-host-netmask
 
-# Ip used for GOG caching
-auto eth0:9
-iface eth0:9 inet static
-address 10.0.1.19
-netmask 255.255.255.0
+# IP used for GOG caching
+auto lc-host-vint:9
+    iface lc-host-vint:9 inet static
+    address lc-host-gog
+    netmask lc-host-netmask
 
-# Ip used for ArenaNetworks caching
-auto eth0:10
-iface eth0:10 inet static
-address 10.0.1.20
-netmask 255.255.255.0
-
+# IP used for ArenaNetworks caching
+auto lc-host-vint:10
+    iface lc-host-vint:10 inet static
+    address lc-host-arena
+    netmask lc-host-netmask
+    
 # IP used for Apple caching
-auto eth0:11
-iface eth0:11 inet static
-address 10.0.1.21
-netmask 255.255.255.0
-
+auto lc-host-vint:11
+    iface lc-host-vint:11 inet static
+    address lc-host-apple
+    netmask lc-host-netmask 
+    
 # IP used for WarGaming caching
-auto eth0:12
-iface eth0:12 inet static
-address 10.0.1.22
-netmask 255.255.255.0
+auto lc-host-vint:12
+    iface lc-host-vint:12 inet static
+    address lc-host-wargaming
+    netmask lc-host-netmask
 
 # IP used for Uplay caching
-auto eth0:13
-iface eth0:13 inet static
-address 10.0.1.23
-netmask 255.255.255.0
-
-# Ip used for Glyph caching
-auto eth0:14
-iface eth0:14 inet static
-address 10.0.1.24
-netmask 255.255.255.0
-
+auto lc-host-vint:13
+    iface lc-host-vint:13 inet static
+    address lc-host-uplay
+    netmask lc-host-netmask 
+    
+# IP used for Glyph caching
+auto lc-host-vint:14
+    iface lc-host-vint:14 inet static
+    address lc-host-glyph
+    netmask lc-host-netmask
+    
 # IP used for ZeniMax caching
-auto eth0:15
-    iface eth0:15 inet static
-    address 10.0.1.25
-    netmask 255.255.255.0
+auto lc-host-vint:15
+    iface lc-host-vint:15 inet static
+    address lc-host-zenimax
+    netmask lc-host-netmask
     
 # IP used for digitalextremes caching
-auto eth0:16
-    iface eth0:16 inet static
-    address 10.0.1.26
-    netmask 255.255.255.0
+auto lc-host-vint:16
+    iface lc-host-vint:16 inet static
+    address lc-host-digitalextremes
+    netmask lc-host-netmask
     
 # IP used for pearlabyss caching
-auto eth0:17
-    iface eth0:17 inet static
-    address 10.0.1.27
-    netmask 255.255.255.0
+auto lc-host-vint:17
+    iface lc-host-vint:17 inet static
+    address lc-host-pearlabyss
+    netmask lc-host-netmask
 ```
 
 	5) Create the user lancache
