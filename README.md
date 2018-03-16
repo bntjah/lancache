@@ -68,7 +68,7 @@ If you want to install it manually, please follow the instructions below:
 	4) Add the virtual interfaces (used for caching in nginx) to /etc/network/interfaces
 
 ```
-# Regular host IP
+# Regular host IP examples need to change for your setup.
 auto eth0
     iface eth0 static
     address 10.0.1.2
