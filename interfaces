@@ -4,6 +4,7 @@ auto lc-host-vint
     address lc-host-ip
     netmask lc-host-netmask
     gateway lc-host-gateway
+    dns-nameservers 8.8.8.8 8.8.4.4
 
 # IP used for Steam caching
 auto lc-host-vint:1
