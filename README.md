@@ -90,7 +90,7 @@ If you want to install it manually, please follow the instructions below:
 		10) Replace the proxy_bind variable with your primary IP address (not one of the virtual ones)
 
 		11) Copy the Lancache file from ~/lancache/init.d/ to /etc/init.d/ by:
-			cp -R ~/lancache/conf/lancache /etc/init.d/
+			cp -R ~/lancache/init.d/ /etc/init.d/
 
 		12) Make it an executable:
 			chmod +x /etc/init.d/lancache
