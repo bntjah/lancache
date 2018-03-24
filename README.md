@@ -50,76 +50,76 @@ If you want to install it manually, please follow the instructions below:
 	   	apt-get install curl git unbound build-essential libpcre3 zlib1g-dev libreadline-dev libncurses5-dev libssl-dev httpry libudns0 libudns-dev libev4 libev-dev devscripts automake libtool autoconf autotools-dev cdbs debhelper dh-autoreconf dpkg-dev gettext pkg-config fakeroot libpcre3-dev libgd2-xpm-dev libgeoip-dev -y
 
     	2) NGINX Pre Req
-	2.1) Get Nginx Cache Purge from Frickle Labs:
-		curl "http://labs.frickle.com/files/ngx_cache_purge-2.3.tar.gz" | tar zx
+		2.1) Get Nginx Cache Purge from Frickle Labs:
+			curl "http://labs.frickle.com/files/ngx_cache_purge-2.3.tar.gz" | tar zx
 	
-    	2.2) Get the Range Cache Plugin from Multiplay Github
-		git clone https://github.com/multiplay/nginx-range-cache/ $pwd/nginx-range-cache
-	2.3) Get Wandenberg NGINX Stream Module
-		curl "https://codeload.github.com/wandenberg/nginx-push-stream-module/tar.gz/0.5.1?dummy=/wandenberg-nginx-push-stream-module-0.5.1_GH0.tar.gz" | tar zx
+    		2.2) Get the Range Cache Plugin from Multiplay Github
+			git clone https://github.com/multiplay/nginx-range-cache/ $pwd/nginx-range-cache
+		2.3) Get Wandenberg NGINX Stream Module
+			curl "https://codeload.github.com/wandenberg/nginx-push-stream-module/tar.gz/0.5.1?dummy=/wandenberg-nginx-push-stream-module-0.5.1_GH0.tar.gz" | tar zx
 	
-	3) Clone the git repo
-	   	git clone -b master http://github.com/bntjah/lancache
+		3) Clone the git repo
+		   	git clone -b master http://github.com/bntjah/lancache
 	
-	4) Install nginx
-	   	4.1) Get Nginx from web
-		curl http://nginx.org/download/nginx-1.13.4.tar.gz | tar zx
-	   	cd ngnix-1.13.4
-                4.2) Patching NGINX for Range Cache from Multiplay
-		patch -p1 <$PWD/nginx-range-cache/range_filter.patch
-		4.3) Configure NGINX with the previously downloaded addons
-	   	./configure --modules-path=$PWD --with-cc-opt='-I /usr/local/include' --with-ld-opt='-L /usr/local/lib' --conf-path=/usr/local/nginx/nginx.conf --sbin-path=/usr/local/sbin/nginx --pid-path=/var/run/nginx.pid --with-file-aio --add-module=$PWD/ngx_cache_purge-2.3 --with-http_flv_module --with-http_geoip_module=dynamic --with-http_gzip_static_module --with-http_image_filter_module=dynamic --with-http_mp4_module --add-module=$PWD/nginx-range-cache --with-http_realip_module --with-http_slice_module --with-http_stub_status_module --with-pcre --with-http_v2_module --with-stream=dynamic --with-stream_ssl_module --with-stream_ssl_preread_module --with-http_ssl_module --add-module=$PWD/nginx-push-stream-module-0.5.1 --with-threads
-	   	make
-	   	make install
+		4) Install nginx
+	   		4.1) Get Nginx from web
+				curl http://nginx.org/download/nginx-1.13.4.tar.gz | tar zx
+	   			cd ngnix-1.13.4
+                	4.2) Patching NGINX for Range Cache from Multiplay
+				patch -p1 <$PWD/nginx-range-cache/range_filter.patch
+			4.3) Configure NGINX with the previously downloaded addons
+	   			./configure --modules-path=$PWD --with-cc-opt='-I /usr/local/include' --with-ld-opt='-L /usr/local/lib' --conf-path=/usr/local/nginx/nginx.conf --sbin-path=/usr/local/sbin/nginx --pid-path=/var/run/nginx.pid --with-file-aio --add-module=$PWD/ngx_cache_purge-2.3 --with-http_flv_module --with-http_geoip_module=dynamic --with-http_gzip_static_module --with-http_image_filter_module=dynamic --with-http_mp4_module --add-module=$PWD/nginx-range-cache --with-http_realip_module --with-http_slice_module --with-http_stub_status_module --with-pcre --with-http_v2_module --with-stream=dynamic --with-stream_ssl_module --with-stream_ssl_preread_module --with-http_ssl_module --add-module=$PWD/nginx-push-stream-module-0.5.1 --with-threads
+	   			make
+	   			make install
 
-	5) Add the virtual interfaces (used for caching in nginx) to /etc/network/interfaces
+		5) Add the virtual interfaces (used for caching in nginx) to /etc/network/interfaces
 
-	6) Create the user lancache
-		adduser --system --no-create-home lancache
-		addgroup --system lancache
-		usermod -aG lancache lancache
+		6) Create the user lancache
+			adduser --system --no-create-home lancache
+			addgroup --system lancache
+			usermod -aG lancache lancache
 	
-	7) Just create the folders:
-		mkdir -p /srv/lancache/data/{microsoft,installs,other,tmp,hirez,origin,riot,gog,sony,steam,wargaming,arenanetworks,uplay,glyph,zenimax,digitalextremes,pearlabyss}
-		mkdir -p /srv/lancache/logs/{Errors,Keys,Access}
+		7) Just create the folders:
+			mkdir -p /srv/lancache/data/{microsoft,installs,other,tmp,hirez,origin,riot,gog,sony,steam,wargaming,arenanetworks,uplay,glyph,zenimax,digitalextremes,pearlabyss}
+			mkdir -p /srv/lancache/logs/{Errors,Keys,Access}
 
-	8.1) chown the folder:
-		chown -R lancache:lancache /srv/lancache
+		8) chown the folder:
+			chown -R lancache:lancache /srv/lancache
 
-	9) Copy the conf folder and contents (where you originally git cloned it to in step 2) to /usr/local/nginx/conf/
-		cp -R ~/lancache/conf /usr/local/nginx/
+		9) Copy the conf folder and contents (where you originally git cloned it to in step 2) to /usr/local/nginx/conf/
+			cp -R ~/lancache/conf /usr/local/nginx/
     		
-		7.1) Replace the proxy_bind variable with your primary IP address (not one of the virtual ones)
+		10) Replace the proxy_bind variable with your primary IP address (not one of the virtual ones)
 
-	10) Copy the Lancache file from ~/lancache/init.d/ to /etc/init.d/ by:
-		cp -R ~/lancache/conf/lancache /etc/init.d/
+		11) Copy the Lancache file from ~/lancache/init.d/ to /etc/init.d/ by:
+			cp -R ~/lancache/conf/lancache /etc/init.d/
 
-	11) Make it an executable:
-		chmod +x /etc/init.d/lancache
+		12) Make it an executable:
+			chmod +x /etc/init.d/lancache
 
-	12) Put it in the standard Boot:
-		update-rc.d lancache defaults
+		13) Put it in the standard Boot:
+			update-rc.d lancache defaults
 
-	13) cp ~/lancache/limits.conf /etc/security/
+		14) cp ~/lancache/limits.conf /etc/security/
 
-   	14) Edit ~/lancache/hosts to your needs, placing all your virtual IP's next to the appropriate caching service
-		12.1) cp ~/lancache/hosts /etc/
+   		15) Edit ~/lancache/hosts to your needs, placing all your virtual IP's next to the appropriate caching service
+			15.1) cp ~/lancache/hosts /etc/
 			
-	15) Disable IPv6
-		echo "net.ipv6.conf.all.disable_ipv6=1" >/etc/sysctl.d/disable-ipv6.conf
-        	sysctl -p /etc/sysctl.d/disable-ipv6.conf
+		16) Disable IPv6
+			echo "net.ipv6.conf.all.disable_ipv6=1" >/etc/sysctl.d/disable-ipv6.conf
+        		sysctl -p /etc/sysctl.d/disable-ipv6.conf
 
-	16) Install sniproxy for passing through HTTPS traffic (cannot be cached)
-		16.1) git clone https://github.com/dlundquist/sniproxy
-		16.2) curl https://raw.githubusercontent.com/OpenSourceLAN/origin-docker/master/sniproxy/sniproxy.conf -o /etc/sniproxy.conf
-		16.3) cd sniproxy
-		16.4) ./autogen.sh && ./configure && make check && make install
+		16) Install sniproxy for passing through HTTPS traffic (cannot be cached)
+			16.1) git clone https://github.com/dlundquist/sniproxy
+			16.2) curl https://raw.githubusercontent.com/OpenSourceLAN/origin-docker/master/sniproxy/sniproxy.conf -o /etc/sniproxy.conf
+			16.3) cd sniproxy
+			16.4) ./autogen.sh && ./configure && make check && make install
 			# If there are problems during test procedures, you can try to skip the checks by leaving out "&&make check" 
-		16.5) Start sniproxy with /usr/local/sbin/sniproxy -c /etc/sniproxy.conf
+			16.5) Start sniproxy with /usr/local/sbin/sniproxy -c /etc/sniproxy.conf
 
-	17) Copy the unbound configuration from ~/lancache/unbound/unbound.conf to /etc/unbound/unbound.conf
-	17.1) Replace the interfaces: section with the normal ip (not the virtual ones)
-    	17.2) Replace all "A records" with the appropriate IPs (the virtual IPs for the appropriate caching service)
+		17) Copy the unbound configuration from ~/lancache/unbound/unbound.conf to /etc/unbound/unbound.conf
+			17.1) Replace the interfaces: section with the normal ip (not the virtual ones)
+    			17.2) Replace all "A records" with the appropriate IPs (the virtual IPs for the appropriate caching service)
 
 ## Traffic Monitoring on CLI
 
