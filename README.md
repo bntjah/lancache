@@ -46,34 +46,32 @@ If you want to install it manually, please follow the instructions below:
 
 	0) Configure proper network interface in your /etc/network/interfaces file, go for static IP address, take notes about all IPs you'll assign, as you need to refer to them during this installation by A LOT!
 
-    	1) Install the required utilities
-	   	apt-get install curl git unbound build-essential libpcre3 zlib1g-dev libreadline-dev libncurses5-dev libssl-dev httpry libudns0 libudns-dev libev4 libev-dev devscripts automake libtool autoconf autotools-dev cdbs debhelper dh-autoreconf dpkg-dev gettext pkg-config fakeroot libpcre3-dev libgd2-xpm-dev libgeoip-dev -y
+	    	1) Install the required utilities
+		   	apt-get install curl git unbound build-essential libpcre3 zlib1g-dev libreadline-dev libncurses5-dev libssl-dev httpry libudns0 libudns-dev libev4 libev-dev devscripts automake libtool autoconf autotools-dev cdbs debhelper dh-autoreconf dpkg-dev gettext pkg-config fakeroot libpcre3-dev libgd2-xpm-dev libgeoip-dev -y
 
-    	2) NGINX Pre Req
-		2.1) Get Nginx Cache Purge from Frickle Labs:
-			curl "http://labs.frickle.com/files/ngx_cache_purge-2.3.tar.gz" | tar zx
-	
-    		2.2) Get the Range Cache Plugin from Multiplay Github
-			git clone https://github.com/multiplay/nginx-range-cache/ $pwd/nginx-range-cache
-		2.3) Get Wandenberg NGINX Stream Module
-			curl "https://codeload.github.com/wandenberg/nginx-push-stream-module/tar.gz/0.5.1?dummy=/wandenberg-nginx-push-stream-module-0.5.1_GH0.tar.gz" | tar zx
+	    	2) NGINX + Pre Req
+			2.1) Get Nginx from web
+				curl http://nginx.org/download/nginx-1.13.4.tar.gz | tar zx
+		   		cd ngnix-1.13.4
+			2.2) Get Nginx Cache Purge from Frickle Labs:
+				curl "http://labs.frickle.com/files/ngx_cache_purge-2.3.tar.gz" | tar zx	
+	    		2.3) Get the Range Cache Plugin from Multiplay Github
+				git clone https://github.com/multiplay/nginx-range-cache/ $PWD/nginx-range-cache
+			2.4) Get Wandenberg NGINX Stream Module
+				curl "https://codeload.github.com/wandenberg/nginx-push-stream-module/tar.gz/0.5.1?dummy=/wandenberg-nginx-push-stream-module-0.5.1_GH0.tar.gz" | tar zx
 	
 		3) Clone the git repo
-		   	git clone -b master http://github.com/bntjah/lancache
-	
-		4) Install nginx
-	   		4.1) Get Nginx from web
-				curl http://nginx.org/download/nginx-1.13.4.tar.gz | tar zx
-	   			cd ngnix-1.13.4
-                	4.2) Patching NGINX for Range Cache from Multiplay
+			   	git clone -b master http://github.com/bntjah/lancache
+		4) Install NGINX 
+               		4.!) Patching NGINX for Range Cache from Multiplay
 				patch -p1 <$PWD/nginx-range-cache/range_filter.patch
-			4.3) Configure NGINX with the previously downloaded addons
+			4.2) Configure NGINX with the previously downloaded addons
 	   			./configure --modules-path=$PWD --with-cc-opt='-I /usr/local/include' --with-ld-opt='-L /usr/local/lib' --conf-path=/usr/local/nginx/nginx.conf --sbin-path=/usr/local/sbin/nginx --pid-path=/var/run/nginx.pid --with-file-aio --add-module=$PWD/ngx_cache_purge-2.3 --with-http_flv_module --with-http_geoip_module=dynamic --with-http_gzip_static_module --with-http_image_filter_module=dynamic --with-http_mp4_module --add-module=$PWD/nginx-range-cache --with-http_realip_module --with-http_slice_module --with-http_stub_status_module --with-pcre --with-http_v2_module --with-stream=dynamic --with-stream_ssl_module --with-stream_ssl_preread_module --with-http_ssl_module --add-module=$PWD/nginx-push-stream-module-0.5.1 --with-threads
 	   			make
 	   			make install
 
-		5) Add the virtual interfaces (used for caching in nginx) to /etc/network/interfaces
-
+		5) Add the virtual interfaces (used for caching in nginx) to /etc/network/interfaces		
+	
 		6) Create the user lancache
 			adduser --system --no-create-home lancache
 			addgroup --system lancache
