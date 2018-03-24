@@ -63,7 +63,7 @@ If you want to install it manually, please follow the instructions below:
 		3) Clone the git repo
 			   	git clone -b master http://github.com/bntjah/lancache
 		4) Install NGINX 
-               		4.!) Patching NGINX for Range Cache from Multiplay
+               		4.1) Patching NGINX for Range Cache from Multiplay
 				patch -p1 <$PWD/nginx-range-cache/range_filter.patch
 			4.2) Configure NGINX with the previously downloaded addons
 	   			./configure --modules-path=$PWD --with-cc-opt='-I /usr/local/include' --with-ld-opt='-L /usr/local/lib' --conf-path=/usr/local/nginx/nginx.conf --sbin-path=/usr/local/sbin/nginx --pid-path=/var/run/nginx.pid --with-file-aio --add-module=$PWD/ngx_cache_purge-2.3 --with-http_flv_module --with-http_geoip_module=dynamic --with-http_gzip_static_module --with-http_image_filter_module=dynamic --with-http_mp4_module --add-module=$PWD/nginx-range-cache --with-http_realip_module --with-http_slice_module --with-http_stub_status_module --with-pcre --with-http_v2_module --with-stream=dynamic --with-stream_ssl_module --with-stream_ssl_preread_module --with-http_ssl_module --add-module=$PWD/nginx-push-stream-module-0.5.1 --with-threads
@@ -84,7 +84,7 @@ If you want to install it manually, please follow the instructions below:
 		8) chown the folder:
 			chown -R lancache:lancache /srv/lancache
 
-		9) Copy the conf folder and contents (where you originally git cloned it to in step 2) to /usr/local/nginx/conf/
+		9) Copy the conf folder and contents (where you originally git cloned it to in step 3) to /usr/local/nginx/conf/
 			cp -R ~/lancache/conf /usr/local/nginx/
     		
 		10) Replace the proxy_bind variable with your primary IP address (not one of the virtual ones)
