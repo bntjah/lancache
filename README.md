@@ -33,6 +33,8 @@ Optional Installer @ https://github.com/nexusofdoom/lancache-installer
     * Did some magic in lancache-origin.conf to make it work :-)
 * 12-4-2017 nexusofdoom
     * Added Warframe and ESO/Elder Scrolls Online to Config.
+* 9-19-2018 bn_
+    * Added the two CDN wich were posted by @Billthecat in Issue #111
 
 ## Important!
 If you already have an installation of nginx installed via apt-get install nginx, it is necessary that you remove it, the configuration files and all recommended packagaes via:
