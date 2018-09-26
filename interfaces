@@ -108,4 +108,9 @@ auto lc-host-vint:17
     address lc-host-pearlabyss
     netmask lc-host-netmask
     
+# IP used for gaijin caching
+auto lc-host-vint:18
+    iface lc-host-vint:18 inet static
+    address lc-host-gaijin
+    netmask lc-host-netmask
 
