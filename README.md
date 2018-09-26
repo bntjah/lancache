@@ -10,8 +10,6 @@ Facebook @ https://www.facebook.com/groups/434599530274923/?notif_id=15090196975
 
 Twitter @ https://twitter.com/search?q=%40LAN_CACHE&src=typd
 
-OS: Debian 9.4 amd64 (Stretch)
-
 Optional Installer @ https://github.com/nexusofdoom/lancache-installer
 
 ## Short Changelog
