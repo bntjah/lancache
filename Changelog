@@ -43,3 +43,11 @@
     * Added 2 Battlenet URLs to Unbound.Conf
     * Added New Origins URLs to Unbound.Conf
     * Did some magic in lancache-origin.conf to make it work :-)
+* 12-4-2017 nexusofdoom
+    * Added Warframe and ESO/Elder Scrolls Online to Config.
+* 9-19-2018 bn_
+    * Added the two CDN wich were posted by @Billthecat in Issue #111
+* 9-26-2018 bn_
+    * Adding CDN's wich are posted in Issues by @Billthecat & @Chong601
+    * Adding Gaijin Support as requested by @Chong601 in Issue #94
+    * Added some CDN's listed by Apple within https://support.apple.com/en-us/HT201999
