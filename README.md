@@ -38,6 +38,7 @@ Optional Installer @ https://github.com/nexusofdoom/lancache-installer
 * 9-26-2018 bn_
     * Adding CDN's wich are posted in Issues by @Billthecat & @Chong601
     * Adding Gaijin Support as requested by @Chong601 in Issue #94
+    * Added some CDN's listed by Apple within https://support.apple.com/en-us/HT201999
 
 ## Important!
 If you already have an installation of nginx installed via apt-get install nginx, it is necessary that you remove it, the configuration files and all recommended packagaes via:
