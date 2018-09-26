@@ -13,15 +13,6 @@ Twitter @ https://twitter.com/search?q=%40LAN_CACHE&src=typd
 Optional Installer @ https://github.com/nexusofdoom/lancache-installer
 
 ## Short Changelog
-* 03-14-2018 imac
-	* Minor changes in Readme.md to provide a more hassle free installation.
-* 6-30-2017 saambd
-    * Added missing } on line 56 of Microsoft conf    
-* 8-03-2017 bn_
-    * Added 2 Steam URLs to Unbound.Conf as posted in Multiplay Github
-* 10-17-2017 bn_    
-    * Added Sony DNS to Unbound.Conf as posted by Muffeee in issues
-    * Added Glyph Support (Still needs testing)
 * 10-25-2017 Nagilum99 & Nexusofdoom
     * Merged the pull request from nagilum99 to correct / standardize the layout (Issue #65)
     * Changed Steamconfig as problem and solution posted by Nexusofdoom (Issue #61)
