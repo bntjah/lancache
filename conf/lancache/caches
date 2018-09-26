@@ -27,3 +27,6 @@ proxy_cache_path /srv/lancache/data/gog levels=2:2 keys_zone=gog:500m inactive=1
 
 #Based of Steamcache CDN Uplay
 proxy_cache_path /srv/lancache/data/uplay levels=2:2 keys_zone=uplay:500m inactive=120d max_size=50000m loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
+
+# Gaijin support requested in Issue #94
+proxy_cache_path /srv/lancache/data/gaijin levels=2:2 keys_zone=gaijin:500m inactive=120d max_size=50000m loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
