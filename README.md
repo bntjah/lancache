@@ -49,7 +49,7 @@ If you want to install it manually, please follow the instructions below:
 	    	2) NGINX + Pre Req
 			2.1) Get Nginx from web
 				curl http://nginx.org/download/nginx-1.13.4.tar.gz | tar zx
-		   		cd ngnix-1.13.4
+		   		cd nginx-1.13.4
 			2.2) Get Nginx Cache Purge from Frickle Labs:
 				curl "http://labs.frickle.com/files/ngx_cache_purge-2.3.tar.gz" | tar zx	
 	    		2.3) Get the Range Cache Plugin from Multiplay Github
