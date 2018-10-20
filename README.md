@@ -110,8 +110,18 @@ If you want to install it manually, please follow the instructions below:
 			16.3) cd sniproxy
 			16.4) ./autogen.sh && ./configure && make check && make install
 			# If there are problems during test procedures, you can try to skip the checks by leaving out "&&make check" 
-			16.5) Start sniproxy with /usr/local/sbin/sniproxy -c /etc/sniproxy.conf
+			16.5) Start sniproxy either:
+				16.5a) Via: /usr/local/sbin/sniproxy -c /etc/sniproxy.conf
+				or
+				16.5b.1) Copy the sniproxy file from ~/lancache/init.d/ to /etc/init.d/ by:
+					cp ~/lancache/init.d/sniproxy /etc/init.d/
 
+				16.5b.2) Make it an executable:
+					chmod +x /etc/init.d/sniproxy
+
+				16.5.b3) Put it in the standard Boot:
+					update-rc.d sniproxy defaults
+			
 		17) Copy the unbound configuration from ~/lancache/unbound/unbound.conf to /etc/unbound/unbound.conf
 			17.1) Replace the interfaces: section with the normal ip (not the virtual ones)
     			17.2) Replace all "A records" with the appropriate IPs (the virtual IPs for the appropriate caching service)
