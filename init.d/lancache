@@ -12,7 +12,7 @@
 ### END INIT INFO
  
 PATH=/opt/bin:/opt/sbin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-DAEMON=/usr/local/nginx/sbin/nginx
+DAEMON=/usr/local/sbin/nginx
 NAME=lancache
 # DESC=Caching Games Locally
  
