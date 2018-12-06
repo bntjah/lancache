@@ -47,7 +47,7 @@ If you want to install it manually, please follow the instructions below:
 	0) Configure proper network interface in your /etc/network/interfaces file, go for static IP address, take notes about all IPs you'll assign, as you need to refer to them during this installation by A LOT!
 
 	    	1) Install the required utilities
-		   	apt-get install curl git unbound build-essential libpcre3 zlib1g-dev libreadline-dev libncurses5-dev libssl-dev httpry libudns0 libudns-dev libev4 libev-dev devscripts automake libtool autoconf autotools-dev cdbs debhelper dh-autoreconf dpkg-dev gettext pkg-config fakeroot libpcre3-dev libgd2-xpm-dev libgeoip-dev -y
+		   	apt-get install curl git unbound build-essential libpcre3 zlib1g-dev libreadline-dev libncurses5-dev libssl-dev httpry libudns0 libudns-dev libev4 libev-dev devscripts automake libtool autoconf autotools-dev cdbs debhelper dh-autoreconf dpkg-dev gettext pkg-config fakeroot libpcre3-dev libgd2-xpm-dev libgeoip-dev tcpdump -y
 
 	    	2) NGINX + Pre Req
 			2.1) Get Nginx from web
@@ -78,7 +78,7 @@ If you want to install it manually, please follow the instructions below:
 			usermod -aG lancache lancache
 	
 		7) Just create the folders:
-			mkdir -p /srv/lancache/data/{microsoft,installs,other,tmp,hirez,origin,riot,gog,sony,steam,wargaming,arenanetworks,uplay,glyph,zenimax,digitalextremes,pearlabyss}
+			mkdir -p /srv/lancache/data/{microsoft,installs,other,tmp,hirez,origin,riot,gog,sony,steam,wargaming,arenanetworks,uplay,glyph,zenimax,digitalextremes,pearlabyss, blizzard, apple}
 			mkdir -p /srv/lancache/logs/{Errors,Keys,Access}
 
 		8) chown the folder:
