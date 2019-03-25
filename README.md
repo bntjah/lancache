@@ -4,7 +4,7 @@ LAN-Cache v1.3-unbound
 Based off work of https://gitlab.com/frag-o-matic/lan-cache
 So credits go to Bruno Gysels and MultiPlay.co.uk for the base they made!
 
-Come visit us @ www.cu-lan.be | www.gunsnbits.de | www.discoverpc.net/ | https://www.netwar.org
+Come visit us @ www.cu-lan.be | www.gunsnbits.de | www.discoverpc.net/ | www.netwar.org
 
 Facebook @ https://www.facebook.com/groups/434599530274923/?notif_id=1509019697563943
 
