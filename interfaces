@@ -114,3 +114,8 @@ auto lc-host-vint:18
     address lc-host-gaijin
     netmask lc-host-netmask
 
+# IP used for epic games caching
+auto lc-host-vint:19
+    iface lc-host-vint:19 inet static
+    address lc-host-epicgames
+    netmask lc-host-netmask
