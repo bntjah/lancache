@@ -1,4 +1,4 @@
-LAN-Cache v1.3-unbound
+LAN-Cache v1.4-unbound
 ==============
 
 Based off work of https://gitlab.com/frag-o-matic/lan-cache
@@ -31,6 +31,8 @@ Optional Installer @ https://github.com/nexusofdoom/lancache-installer
 * 10-20-2018 Nagilum99
     * Rewrote Readme
     * Fixed an issue where bn_ missed some Gaijin hosts
+ * 08-18-2019 bn_
+    * Added EPIC Games CDN's and config as Lancache.net & UKLANS have been in contact with EPIC Games
 
 ## Important!
 If you already have an installation of nginx installed via apt-get install nginx, it is necessary that you remove it, the configuration files and all recommended packagaes via:
