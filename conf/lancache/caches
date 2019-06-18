@@ -32,4 +32,4 @@ proxy_cache_path /srv/lancache/data/uplay levels=2:2 keys_zone=uplay:500m inacti
 proxy_cache_path /srv/lancache/data/gaijin levels=2:2 keys_zone=gaijin:500m inactive=120d max_size=50000m loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
 
 # EPIC Games by Lancache.net / UKLANS
-proxy_cache_path /srv/lancache/data/epicgames levels=2:2 keys_zone=riot:500m inactive=120d max_size=75000m loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
+proxy_cache_path /srv/lancache/data/epicgames levels=2:2 keys_zone=epicgames:500m inactive=120d max_size=75000m loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
