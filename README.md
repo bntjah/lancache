@@ -33,6 +33,8 @@ Optional Installer @ https://github.com/nexusofdoom/lancache-installer
     * Fixed an issue where bn_ missed some Gaijin hosts
  * 08-18-2019 bn_
     * Added EPIC Games CDN's and config as Lancache.net & UKLANS have been in contact with EPIC Games
+ * 10-24-2019 Nagilum99
+    * Added MS DNS Entries that can be cached (See Issue #146)
 
 ## Important!
 If you already have an installation of nginx installed via apt-get install nginx, it is necessary that you remove it, the configuration files and all recommended packagaes via:
