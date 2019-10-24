@@ -56,3 +56,5 @@
     * Fixed an issue where bn_ missed some Gaijin hosts    
 * 08-18-2019 bn_
     * Added EPIC Games CDN's and config as Lancache.net & UKLANS have been in contact with EPIC Games
+ * 10-24-2019 Nagilum99
+    * Added MS DNS Entries that can be cached (See Issue #146)
