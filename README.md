@@ -82,7 +82,7 @@ If you want to install it manually, please follow the instructions below:
 			usermod -aG lancache lancache
 	
 		7) Just create the folders:
-			mkdir -p /srv/lancache/data/{microsoft,installs,other,tmp,hirez,origin,riot,gog,sony,steam,wargaming,arenanetworks,uplay,glyph,zenimax,digitalextremes,pearlabyss, blizzard, apple}
+			mkdir -p /srv/lancache/data/{microsoft,installs,other,tmp,hirez,origin,riot,gog,sony,steam,wargaming,arenanetworks,uplay,glyph,zenimax,digitalextremes,pearlabyss,blizzard,apple,epicgames}
 			mkdir -p /srv/lancache/logs/{Errors,Keys,Access}
 
 		8) chown the folder:
