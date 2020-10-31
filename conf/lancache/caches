@@ -4,9 +4,13 @@ proxy_cache_path /srv/lancache/data/other levels=2:2 keys_zone=other:100m inacti
 proxy_temp_path /srv/lancache/data/tmp/ 1 2;
 
 proxy_cache_path /srv/lancache/data/blizzard levels=2:2 keys_zone=blizzard:500m inactive=120d max_size=100000m loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
+proxy_cache_path /srv/lancache/data/eyedentity levels=2:2 keys_zone=eyedentity:1000m inactive=120d max_size=500g loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
 proxy_cache_path /srv/lancache/data/steam levels=2:2 keys_zone=steam:500m inactive=120d max_size=5000000m loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
 proxy_cache_path /srv/lancache/data/origin levels=2:2 keys_zone=origin:500m inactive=120d max_size=100000m loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
-
+proxy_cache_path /srv/lancache/data/raspbian levels=2:2 keys_zone=raspbian:1000m inactive=30d max_size=500g loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
+proxy_cache_path /srv/lancache/data/ubuntu levels=2:2 keys_zone=ubuntu:1000m inactive=30d max_size=500g loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
+proxy_cache_path /srv/lancache/data/kali levels=2:2 keys_zone=kali:1000m inactive=30d max_size=500g loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
+proxy_cache_path /srv/lancache/data/garena levels=2:2 keys_zone=garena:1000m inactive=120d max_size=500g loader_files=10000 loader_sleep=50ms loader_threshold=300ms;
 proxy_cache_path /srv/lancache/data/hirez levels=2:2 keys_zone=hirez:500m inactive=120d max_size=75000m loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
 proxy_cache_path /srv/lancache/data/riot levels=2:2 keys_zone=riot:500m inactive=120d max_size=75000m loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
 proxy_cache_path /srv/lancache/data/sony levels=2:2 keys_zone=sony:500m inactive=120d max_size=50000m loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
@@ -14,7 +18,9 @@ proxy_cache_path /srv/lancache/data/sony levels=2:2 keys_zone=sony:500m inactive
 #Added by Nexusofdoom
 proxy_cache_path /srv/lancache/data/enmasse levels=2:2 keys_zone=enmasse:500m inactive=120d max_size=50000m loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
 proxy_cache_path /srv/lancache/data/microsoft levels=2:2 keys_zone=microsoft:500m inactive=120d max_size=50000m loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
+proxy_cache_path /srv/lancache/data/microsoft-office levels=2:2 keys_zone=microsoft-office:1000m inactive=120d max_size=500g loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
 proxy_cache_path /srv/lancache/data/wargaming levels=2:2 keys_zone=wargaming:500m inactive=120d max_size=50000m loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
+
 proxy_cache_path /srv/lancache/data/arenanetworks levels=2:2 keys_zone=arenanetworks:500m inactive=120d max_size=50000m loader_files=1000 loader_sleep=50ms loader_threshold=300ms;
 proxy_cache_path /srv/lancache/data/apple levels=2:2 keys_zone=apple:500m inactive=888d max_size=500000m loader_files=4000 loader_sleep=50ms loader_threshold=300ms;
 proxy_cache_path /srv/lancache/data/glyph levels=2:2 keys_zone=glyph:500m inactive=888d max_size=500000m loader_files=4000 loader_sleep=50ms loader_threshold=300ms;
